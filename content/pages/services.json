@@ -1,0 +1,102 @@
+{
+  "title": "Financial Planning Services | Vertical Wealth",
+  "description": "Wealth plans, portfolio management, estate planning, risk management and more. Holistic, fiduciary, fee-based financial planning from Vertical Wealth.",
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "Services",
+      "headline": "Holistic planning, rooted in faith",
+      "body": "Vertical Wealth takes a holistic, values-driven approach to financial planning. Our service is fiduciary and fee-based, customized to your specific needs. It all starts with a free discovery call, where we get to know you and your goals.",
+      "buttons": [
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "primary"
+        },
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "cards",
+      "heading": "Plan, invest, leave a legacy",
+      "style": "boxed",
+      "anchor": "services",
+      "items": [
+        {
+          "title": "Wealth plan",
+          "body": "We help you evaluate your current situation and build a plan to pursue true wealth and the goals and dreams that matter most to you."
+        },
+        {
+          "title": "Portfolio management",
+          "body": "Investment management that aims for capital growth and preservation through diversification, asset allocation and long-term strategies."
+        },
+        {
+          "title": "Life goals blueprinting",
+          "body": "A deeper look at your purpose and passions in life, brought into line with your action plan for intentional living."
+        },
+        {
+          "title": "Estate planning",
+          "body": "A road map of your wishes and intentions, so you can plan the legacy you've always wanted to leave."
+        }
+      ]
+    },
+    {
+      "_template": "cards",
+      "heading": "Protect, build and grow",
+      "tone": "black",
+      "style": "boxed",
+      "anchor": "business",
+      "items": [
+        {
+          "title": "Risk management",
+          "body": "We assess your exposure to potential loss and pitfalls, then help put the appropriate tools and protection in place.",
+          "linkLabel": "Get life insurance quotes",
+          "linkHref": "/life-insurance"
+        },
+        {
+          "title": "Business development and transitions",
+          "body": "A coaching and training environment, with the tools you need to build, grow and transition your business."
+        },
+        {
+          "title": "Real estate services",
+          "body": "Knowledge and resources for acquiring personal and business property as you continue to grow."
+        }
+      ]
+    },
+    {
+      "_template": "richText",
+      "heading": "Fiduciary and fee-based",
+      "anchor": "fees",
+      "body": "Our service is fiduciary and fee-based. Advisory fees are a percentage of the assets we manage. The full fee schedule is in our Form ADV, available on request.\n\nIn a world of shifting values, we ground our advice in timeless truth. A few core biblical principles shape how we see wealth, purpose and stewardship. [Read about our approach](/our-approach).",
+      "buttons": [
+        {
+          "label": "See how it works",
+          "href": "/how-it-works",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "ctaBanner",
+      "heading": "Get clarity over complexity",
+      "tone": "purple",
+      "body": "Live boldly. Give generously. Leave a legacy. It starts with a 15-minute, no-pressure discovery call with Brian. Bring your questions; there's no need to bring statements.",
+      "buttons": [
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "primary"
+        },
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "secondary"
+        }
+      ]
+    }
+  ]
+}

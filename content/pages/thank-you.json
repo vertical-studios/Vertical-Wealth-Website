@@ -1,0 +1,44 @@
+{
+  "title": "Thank You | Vertical Wealth",
+  "description": "Thanks for reaching out to Vertical Wealth. Here's what to expect on your discovery call with Brian, and a few things to explore while you wait.",
+  "noindex": true,
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "Thank you",
+      "headline": "You're all set",
+      "body": "Thanks for reaching out. If you booked a discovery call, it's on Brian's calendar. If you signed up for Weekly Lessons, watch your inbox for your first lesson."
+    },
+    {
+      "_template": "steps",
+      "heading": "What to expect on your discovery call",
+      "body": "Need to change the time? Call (317) 794-2148 or email info@verticalwealth.life.",
+      "tone": "purple",
+      "items": [
+        "15 minutes with Brian: a relaxed, no-pressure conversation.",
+        "Your story: tell us about your family, your goals and your biggest questions.",
+        "Nothing to prepare: no statements or paperwork needed.",
+        "A clear next step: if it feels like a good fit for both of us, we'll set up a deep dive, 1 to 2 hours to look at the full picture."
+      ]
+    },
+    {
+      "_template": "cards",
+      "heading": "While you wait",
+      "style": "plain",
+      "items": [
+        {
+          "title": "Weekly Lessons",
+          "body": "One short email each week with scripture, a personal insight from Brian and one step to take. Free, and you can unsubscribe any time.",
+          "linkLabel": "Get Weekly Lessons",
+          "linkHref": "/weekly-lessons"
+        },
+        {
+          "title": "Our approach",
+          "body": "The biblical principles that shape how we plan, invest and give.",
+          "linkLabel": "Read our approach",
+          "linkHref": "/our-approach"
+        }
+      ]
+    }
+  ]
+}

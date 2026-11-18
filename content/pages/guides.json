@@ -1,0 +1,89 @@
+{
+  "title": "Free Financial Planning Guides | Vertical Wealth",
+  "description": "Free guides for the money decisions that matter to your family. Download 12 questions to ask your financial advisor, with a new guide each month.",
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "Free guides",
+      "headline": "Free guides for clearer decisions",
+      "body": "Short, practical guides for the money decisions that matter most to your family. Download them free, with no form to fill out.",
+      "buttons": [
+        {
+          "label": "Download the guide",
+          "href": "https://myauus.sharepoint.com/:b:/s/VerticalStudios/EUgP6mZGDLdNtAdT5IyMDdYBR7RN-L6xJ73WrYynRxSn7Q?e=gLpFmi",
+          "style": "primary"
+        },
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "richText",
+      "heading": "Beyond the balance sheet: 12 questions to ask your financial advisor",
+      "tone": "black",
+      "anchor": "advisor-questions",
+      "body": "Choosing a financial advisor is a big decision, and so is deciding whether to stay with the one you have. This guide gives you 12 questions to ask, so you can look beyond the balance sheet and see whether an advisor is the right fit for your family.\n\nIt's a free PDF. Download it, print it and bring it to your next conversation with any advisor, including us.",
+      "buttons": [
+        {
+          "label": "Download the free PDF",
+          "href": "https://myauus.sharepoint.com/:b:/s/VerticalStudios/EUgP6mZGDLdNtAdT5IyMDdYBR7RN-L6xJ73WrYynRxSn7Q?e=gLpFmi",
+          "style": "primary"
+        }
+      ]
+    },
+    {
+      "_template": "cards",
+      "heading": "A new guide every month",
+      "body": "We add a new free guide each month. Here's what's coming soon.",
+      "style": "boxed",
+      "items": [
+        {
+          "eyebrow": "Coming soon",
+          "title": "A year in giving",
+          "body": "A simple way to plan your generosity across the whole year, so giving has a place in your plan in every season."
+        },
+        {
+          "eyebrow": "Coming soon",
+          "title": "Old 401(k) roundup",
+          "body": "Retirement accounts scattered across past jobs? A checklist for finding them, understanding your options and knowing what to ask before you move anything."
+        },
+        {
+          "eyebrow": "Coming soon",
+          "title": "Business exit checklist",
+          "body": "The decisions to work through before you sell or step away from a business, from timing to what the proceeds should do next."
+        }
+      ]
+    },
+    {
+      "_template": "embed",
+      "heading": "Hear when each guide is out",
+      "body": "Get Weekly Lessons and we'll let you know when each new guide is ready. Each week you'll get one short email with scripture, a personal insight from Brian and one step to take. It's free, and you can unsubscribe any time.",
+      "kind": "form",
+      "widgetId": "Tleyh88lPOLOomyni9i8",
+      "height": 495,
+      "anchor": "weekly-lessons",
+      "tone": "purple"
+    },
+    {
+      "_template": "ctaBanner",
+      "heading": "Rather talk it through?",
+      "body": "Book a 15-minute, no-pressure discovery call with Brian. Bring your questions; there's no need to bring statements.",
+      "tone": "black",
+      "buttons": [
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "primary"
+        },
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "secondary"
+        }
+      ]
+    }
+  ]
+}

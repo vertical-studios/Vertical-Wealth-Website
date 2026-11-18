@@ -1,0 +1,18 @@
+---
+import { tf } from "../lib/tina";
+interface Btn { label: string; href: string; style?: string | null }
+const { buttons = [] } = Astro.props as { buttons?: Btn[] | null };
+const ext = (h: string) => /^https?:/.test(h);
+---
+{buttons && buttons.length > 0 && (
+  <div class="btn-row">
+    {buttons.map((b) => (
+      <a
+        class={`btn btn-${b.style || "primary"}`}
+        data-tina-field={tf(b)}
+        href={b.href}
+        {...(ext(b.href) ? { target: "_blank", rel: "noopener" } : {})}
+      >{b.label}</a>
+    ))}
+  </div>
+)}

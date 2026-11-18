@@ -1,0 +1,202 @@
+{
+  "logo": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/15fc20c5-453d-4ed8-b67f-14dd4768e555/VW+white+bold+yellow+horizontal.png",
+  "logoStacked": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/15fc20c5-453d-4ed8-b67f-14dd4768e555/VW+white+bold+yellow+horizontal.png",
+  "favicon": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/1754880779427-9LWZ32KEAVBJXZQKHOKL/favicon.ico?format=100w",
+  "ogImage": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/4fad034d-f48e-4aa3-8944-3b747f15ea32/pexels-alena-evseenko-660538512-34120054.jpg?format=1500w",
+  "nav": [
+    {
+      "label": "Our approach",
+      "links": [
+        {
+          "label": "Our approach",
+          "href": "/our-approach"
+        },
+        {
+          "label": "How it works",
+          "href": "/how-it-works"
+        }
+      ]
+    },
+    {
+      "label": "What we do",
+      "links": [
+        {
+          "label": "Services",
+          "href": "/services"
+        },
+        {
+          "label": "Life insurance quotes",
+          "href": "/life-insurance"
+        }
+      ]
+    },
+    {
+      "label": "Who we serve",
+      "href": "/who-we-serve"
+    },
+    {
+      "label": "Resources",
+      "links": [
+        {
+          "label": "Weekly Lessons",
+          "href": "/weekly-lessons"
+        },
+        {
+          "label": "Free guides",
+          "href": "/guides"
+        },
+        {
+          "label": "Insights",
+          "href": "/blog"
+        }
+      ]
+    },
+    {
+      "label": "About",
+      "links": [
+        {
+          "label": "Team",
+          "href": "/team"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact"
+        },
+        {
+          "label": "Disclosures",
+          "href": "/disclosures"
+        }
+      ]
+    }
+  ],
+  "clientLogins": [
+    {
+      "label": "Planning (MoneyGuidePro)",
+      "href": "https://www.moneyguidepro.com/ifa/Guests.aspx?gst=&sDestPage=10032"
+    },
+    {
+      "label": "Accounts (Schwab)",
+      "href": "https://client.schwab.com/Areas/Access/Login"
+    }
+  ],
+  "navCta": {
+    "label": "Book a call",
+    "short": "Book",
+    "href": "/book-a-call"
+  },
+  "tagline": "Live boldly. Give generously. Leave a legacy.",
+  "disclosures": [
+    "Vertical Wealth is not giving you personalized investment or financial planning advice here, only general information. Personalized advice is only given after signing a client advising contract with us and the initial payment of fees by you.",
+    "Trust and investment management accounts and services offered by Vertical Wealth are not insured by the FDIC or any other federal government agency, are not deposits or other obligations of, nor guaranteed by any bank or bank affiliate, and are subject to investment risk, including possible loss of the principal amount invested. Past performance is not indicative of future performance or success.",
+    "CFP Board owns the certification marks CFP® and CERTIFIED FINANCIAL PLANNER® in the U.S."
+  ],
+  "address": "10330 N Meridian St, Ste 300, Indianapolis, IN 46290",
+  "phone": "(317) 794-2148",
+  "email": "info@verticalwealth.life",
+  "footerLinks": [
+    {
+      "section": "What we do",
+      "label": "Services",
+      "href": "/services"
+    },
+    {
+      "section": "What we do",
+      "label": "Life insurance quotes",
+      "href": "/life-insurance"
+    },
+    {
+      "section": "What we do",
+      "label": "Who we serve",
+      "href": "/who-we-serve"
+    },
+    {
+      "section": "What we do",
+      "label": "How it works",
+      "href": "/how-it-works"
+    },
+    {
+      "section": "Learn",
+      "label": "Our approach",
+      "href": "/our-approach"
+    },
+    {
+      "section": "Learn",
+      "label": "Weekly Lessons",
+      "href": "/weekly-lessons"
+    },
+    {
+      "section": "Learn",
+      "label": "Free guides",
+      "href": "/guides"
+    },
+    {
+      "section": "Learn",
+      "label": "Insights",
+      "href": "/blog"
+    },
+    {
+      "section": "About",
+      "label": "Team",
+      "href": "/team"
+    },
+    {
+      "section": "About",
+      "label": "Contact",
+      "href": "/contact"
+    },
+    {
+      "section": "About",
+      "label": "Book a call",
+      "href": "/book-a-call"
+    }
+  ],
+  "social": [
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/VerticalWealth/"
+    },
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/vertical_wealth"
+    },
+    {
+      "label": "YouTube",
+      "href": "https://www.youtube.com/@vertical_wealth"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/company/vertical-wealth-official"
+    }
+  ],
+  "legal": [
+    {
+      "label": "Privacy policy",
+      "href": "/privacy-policy"
+    },
+    {
+      "label": "Terms of service",
+      "href": "/terms-of-service"
+    },
+    {
+      "label": "Disclosures",
+      "href": "/disclosures"
+    }
+  ],
+  "family": [
+    {
+      "label": "Vertical Life",
+      "href": "https://thevertical.life",
+      "logo": "https://images.squarespace-cdn.com/content/v1/6628083a88405b4d0f29bf6f/375f3854-3eb0-4eea-9c20-f84e2037de9e/VL+white+bold+yellow+horizontal.png?format=750w"
+    },
+    {
+      "label": "Vertical Immersive",
+      "href": "https://www.verticalimmersive.life/",
+      "logo": "https://images.squarespace-cdn.com/content/v1/667c450ccef1c76b7cebfd4c/2e824f74-41c8-4889-ba82-b4ec779676ad/VI+white+bold+yellow+horizontal.png?format=750w"
+    },
+    {
+      "label": "Vertical Studios",
+      "href": "https://www.verticalstudios.life/",
+      "logo": "https://images.squarespace-cdn.com/content/v1/6628083a88405b4d0f29bf6f/3d25ed0c-15fb-421e-9725-f759edebcb04/VS+white+bold+yellow+horizontal.png?format=750w"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "title": "Life Insurance Quotes | Vertical Wealth",
+  "description": "Request custom life insurance quotes. Vertical Wealth shops many major carriers to help you find affordable, appropriate coverage in three simple steps.",
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "Life insurance",
+      "headline": "Life insurance quotes",
+      "body": "Vertical Wealth shops many major life insurance carriers to help clients find affordable and appropriate coverage. Fill out the form to receive your custom quotes.",
+      "buttons": [
+        {
+          "label": "Request quotes",
+          "href": "#quote",
+          "style": "primary"
+        },
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "richText",
+      "heading": "Coverage that gives back",
+      "tone": "black",
+      "body": "Up to 30% of our profits for each new policy go to Vertical Life Foundation to support various causes such as tuition assistance and world mission projects that are student supported through Vertical Immersive.\n\nLife insurance provides resources when they're needed most, during hard seasons of transition. The need ranges from family income replacement to long-term legacy support of a charitable organization or world mission. Working through Vertical Wealth brings the added benefit of helping organizations now, through gift planning and gifting profits toward meaningful projects that help serve the Kingdom."
+    },
+    {
+      "_template": "steps",
+      "heading": "A simple, three-step process",
+      "tone": "purple",
+      "body": "Our new policy process is simple and pain-free.",
+      "items": [
+        "Application by phone: Our life insurance specialist will schedule a time to take your application information over the phone.",
+        "Electronic signatures: We'll send you an electronic link for signatures.",
+        "Delivery by email: When your policy is ready for review, you'll receive it by email and can take delivery electronically."
+      ]
+    },
+    {
+      "_template": "embed",
+      "heading": "Request your custom quotes",
+      "body": "Tell us a little about the coverage you're looking for. Our life insurance specialist will use it to prepare your quotes and schedule a time to talk.",
+      "kind": "form",
+      "widgetId": "rU1nedWJasl0Xgd2Ib4I",
+      "height": 1143,
+      "anchor": "quote"
+    },
+    {
+      "_template": "ctaBanner",
+      "heading": "Let's talk about what's possible",
+      "tone": "purple",
+      "body": "Life insurance is one part of a complete plan. The first step is a 15-minute, no-obligation discovery call with Brian to find out if Vertical Wealth is the right fit for you.",
+      "buttons": [
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "primary"
+        },
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "secondary"
+        }
+      ]
+    }
+  ]
+}

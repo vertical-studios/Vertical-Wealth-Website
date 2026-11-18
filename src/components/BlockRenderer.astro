@@ -1,0 +1,27 @@
+---
+import Hero from "./blocks/Hero.astro";
+import ImageText from "./blocks/ImageText.astro";
+import Cards from "./blocks/Cards.astro";
+import RichText from "./blocks/RichText.astro";
+import Video from "./blocks/Video.astro";
+import CtaBanner from "./blocks/CtaBanner.astro";
+import Faq from "./blocks/Faq.astro";
+import Embed from "./blocks/Embed.astro";
+import Testimonials from "./blocks/Testimonials.astro";
+import Verse from "./blocks/Verse.astro";
+import Stats from "./blocks/Stats.astro";
+import Steps from "./blocks/Steps.astro";
+import PostList from "./blocks/PostList.astro";
+
+// Must match the template names in tina/config.ts
+const registry: Record<string, any> = {
+  hero: Hero, imageText: ImageText, cards: Cards,
+  richText: RichText, video: Video, ctaBanner: CtaBanner, faq: Faq, embed: Embed,
+  testimonials: Testimonials, verse: Verse, stats: Stats, steps: Steps, postList: PostList,
+};
+const { blocks = [] } = Astro.props;
+---
+{blocks.map((b: any, i: number) => {
+  const Cmp = registry[b._template];
+  return Cmp ? <Cmp {...b} index={i} /> : null;
+})}

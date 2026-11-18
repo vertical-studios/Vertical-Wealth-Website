@@ -1,0 +1,202 @@
+---
+const { settings } = Astro.props;
+const here = Astro.url.pathname.replace(/\.html$/, "");
+const isCurrent = (href: string) => href !== "/" && (here === href || here.startsWith(href + "/"));
+// Group a dropdown's links by their optional "section" so big menus read as columns.
+const sectionsOf = (links: any[] = []) => {
+  const out: { name: string; links: any[] }[] = [];
+  links.forEach((l) => {
+    const name = l.section || "";
+    const last = out[out.length - 1];
+    if (last && last.name === name) last.links.push(l);
+    else out.push({ name, links: [l] });
+  });
+  return out;
+};
+const logo = settings.logo;
+const logins = settings.clientLogins || [];
+const cta = { href: settings.navCta?.href || "/book-a-call", label: settings.navCta?.label || "Book a call", short: settings.navCta?.short || "Book" };
+---
+<header class="site-header">
+  {logins.length > 0 && (
+    <div class="util">
+      <div class="wrap util-in">
+        <span class="util-h">Client login</span>
+        {logins.map((l: any) => <a href={l.href} target="_blank" rel="noopener">{l.label}</a>)}
+      </div>
+    </div>
+  )}
+  <div class="wrap bar">
+    <a href="/" class="logo" aria-label="Vertical Wealth home">
+      <img src={logo} alt="Vertical Wealth" width="230" height="54" />
+    </a>
+    <a class="btn btn-primary bar-cta" href={cta.href}>
+      <span class="long">{cta.label}</span><span class="short">{cta.short}</span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr">Menu</span><span class="burger" aria-hidden="true"></span>
+    </button>
+    <nav id="site-nav" aria-label="Main">
+      <ul class="menu">
+        {settings.nav.map((group: any, gi: number) =>
+          group.links && group.links.length > 0 ? (
+            <li class="group">
+              <button class="group-btn" aria-expanded="false" aria-controls={`drop-${gi}`}>{group.label}</button>
+              {(() => {
+                const secs = sectionsOf(group.links);
+                const mega = secs.length > 1;
+                return (
+                  <div class:list={["drop", { mega }]} id={`drop-${gi}`} style={mega ? `--cols:${secs.length}` : undefined}>
+                    {secs.map((sec) => (
+                      <div class="sec">
+                        {sec.name && <p class="sec-h">{sec.name}</p>}
+                        <ul>
+                          {sec.links.map((l: any) => (
+                            <li><a href={l.href} aria-current={isCurrent(l.href) ? "page" : undefined}>{l.label}</a></li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                );
+              })()}
+            </li>
+          ) : (
+            <li><a class="top-link" href={group.href} aria-current={isCurrent(group.href) ? "page" : undefined}>{group.label}</a></li>
+          )
+        )}
+      </ul>
+      <a class="btn btn-primary nav-cta" href={cta.href}>{cta.label}</a>
+      {logins.length > 0 && (
+        <div class="m-logins">
+          <p class="sec-h">Client login</p>
+          {logins.map((l: any) => <a href={l.href} target="_blank" rel="noopener">{l.label}</a>)}
+        </div>
+      )}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
+  const nav = document.getElementById("site-nav");
+  const groupBtns = document.querySelectorAll<HTMLButtonElement>(".group-btn");
+  const closeGroups = () => groupBtns.forEach((b) => b.setAttribute("aria-expanded", "false"));
+  const setMenu = (open: boolean) => {
+    toggle?.setAttribute("aria-expanded", String(open));
+    nav?.classList.toggle("open", open);
+    document.documentElement.classList.toggle("menu-open", open);
+  };
+  toggle?.addEventListener("click", () => setMenu(toggle.getAttribute("aria-expanded") !== "true"));
+  groupBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const open = btn.getAttribute("aria-expanded") === "true";
+      closeGroups();
+      btn.setAttribute("aria-expanded", String(!open));
+    });
+  });
+  // Tapping any link in the menu closes it (also covers same-page anchors).
+  nav?.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { setMenu(false); closeGroups(); }));
+  document.addEventListener("click", (e) => {
+    if (!(e.target as Element).closest(".group")) closeGroups();
+  });
+  // Tabbing out of an open dropdown closes it.
+  document.querySelectorAll<HTMLElement>(".group").forEach((g) => {
+    g.addEventListener("focusout", (e) => {
+      const next = e.relatedTarget as Node | null;
+      if (next && !g.contains(next)) g.querySelector(".group-btn")?.setAttribute("aria-expanded", "false");
+    });
+    g.addEventListener("mouseleave", () => g.classList.remove("esc"));
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    // A dropdown shown by hover hides until the pointer leaves (WCAG 1.4.13).
+    document.querySelectorAll(".group:hover").forEach((g) => g.classList.add("esc"));
+    const openGroup = document.querySelector<HTMLButtonElement>('.group-btn[aria-expanded="true"]');
+    if (openGroup) { closeGroups(); openGroup.focus(); return; }
+    if (toggle?.getAttribute("aria-expanded") === "true") { setMenu(false); toggle.focus(); }
+  });
+  // Leaving mobile width with the menu open should not leave the page locked.
+  matchMedia("(min-width: 1061px)").addEventListener("change", (m) => m.matches && setMenu(false));
+</script>
+
+<style>
+  .site-header { position: sticky; top: 0; z-index: 50; background: var(--black); color: var(--white); border-bottom: 4px solid var(--purple); }
+  .util { border-bottom: 1px solid var(--white); font-size: 0.85rem; }
+  .util-in { display: flex; justify-content: flex-end; align-items: center; gap: 4px 18px; min-height: 34px; }
+  .util-h { font-weight: 700; }
+  .util a { color: var(--white); text-underline-offset: 3px; }
+  .util a:hover { color: var(--yellow); }
+  .m-logins { display: none; }
+  .bar { display: flex; align-items: center; gap: 28px; min-height: 80px; }
+  .logo { display: inline-flex; align-items: center; min-height: 44px; flex: none; }
+  .logo img { width: 210px; height: auto; }
+  nav { display: flex; align-items: center; gap: 28px; margin-left: auto; }
+  .menu { list-style: none; display: flex; align-items: center; gap: 4px; margin: 0; padding: 0; }
+  .menu > li { position: relative; }
+  .group-btn, .top-link {
+    display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 6px 14px 2px;
+    background: none; border: 0; cursor: pointer; text-decoration: none; color: var(--white);
+    font: 600 1.5rem/1 var(--display); letter-spacing: var(--track);
+  }
+  .group-btn::after { content: ""; width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translate(-2px, -2px); }
+  .group-btn:hover, .top-link:hover, .top-link[aria-current="page"] { color: var(--yellow); }
+  .group-btn[aria-expanded="true"] { color: var(--yellow); }
+  .drop {
+    position: absolute; top: calc(100% + 10px); left: 0; min-width: 260px; padding: 12px 0;
+    background: var(--black); border: 2px solid var(--white); border-top: 4px solid var(--purple);
+    display: none;
+  }
+  .drop.mega { display: none; grid-template-columns: repeat(var(--cols), minmax(200px, 1fr)); padding: 16px 0; }
+  .group-btn[aria-expanded="true"] + .drop { display: block; }
+  .group-btn[aria-expanded="true"] + .drop.mega { display: grid; }
+  @media (hover: hover) and (min-width: 1061px) {
+    .group:hover:not(.esc) > .drop { display: block; }
+    .group:hover:not(.esc) > .drop.mega { display: grid; }
+    .group:hover::before { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 12px; }
+  }
+  .drop ul { list-style: none; margin: 0; padding: 0; }
+  .sec + .sec { border-left: 2px solid var(--white); }
+  .sec-h { margin: 0 20px 8px; padding-bottom: 8px; border-bottom: 2px solid var(--yellow); color: var(--yellow); font: 600 1.25rem/1 var(--display); letter-spacing: var(--track); }
+  .drop a { display: block; padding: 9px 20px; text-decoration: none; font: 600 1.35rem/1.15 var(--display); letter-spacing: var(--track); }
+  .drop a:hover, .drop a[aria-current="page"] { color: var(--yellow); }
+  .nav-cta { white-space: nowrap; }
+  .bar-cta { display: none; }
+  .menu-toggle { display: none; background: none; border: 0; padding: 12px; cursor: pointer; min-width: 48px; min-height: 48px; place-items: center; }
+  .burger, .burger::before, .burger::after { display: block; width: 26px; height: 2px; background: var(--white); position: relative; content: ""; }
+  .burger::before { position: absolute; top: -8px; }
+  .burger::after { position: absolute; top: 8px; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+  @media (max-width: 1060px) {
+    .util { display: none; }
+    .bar { gap: 12px; min-height: 72px; }
+    .logo { margin-right: auto; }
+    .logo img { width: 170px; }
+    .menu-toggle { display: grid; margin-right: -12px; }
+    .bar-cta { display: inline-flex; min-height: 44px; padding: 0.4em 0.7em 0.3em; white-space: nowrap; }
+    .bar-cta .short { display: none; }
+    nav {
+      position: fixed; inset: 76px 0 0 0; background: var(--black); flex-direction: column; align-items: stretch; gap: 0;
+      padding: 16px max(var(--gutter), env(safe-area-inset-right, 0px)) 40px max(var(--gutter), env(safe-area-inset-left, 0px));
+      overflow-y: auto; overscroll-behavior: contain; transform: translateX(100%); visibility: hidden;
+      transition: transform 0.25s ease, visibility 0s linear 0.25s;
+    }
+    nav.open { transform: none; visibility: visible; transition: transform 0.25s ease, visibility 0s; }
+    :global(html.menu-open) { overflow: hidden; }
+    .menu { flex-direction: column; align-items: stretch; }
+    .group-btn, .top-link { width: 100%; justify-content: space-between; font-size: 1.9rem; padding: 14px 0; border-bottom: 2px solid var(--white); }
+    .drop, .drop.mega, .group-btn[aria-expanded="true"] + .drop.mega { position: static; box-shadow: none; border: 0; padding: 4px 0 12px 12px; grid-template-columns: 1fr; }
+    .sec + .sec { border-left: 0; margin-top: 10px; }
+    .sec-h { margin: 8px 0 4px; }
+    .drop a { padding: 12px 0; font-size: 1.5rem; }
+    .nav-cta { margin-top: 24px; }
+    .m-logins { display: grid; gap: 4px; margin-top: 28px; }
+    .m-logins a { padding: 10px 0; color: var(--white); font-weight: 500; }
+  }
+  @media (max-width: 420px) {
+    .logo img { width: 132px; }
+    .bar-cta .long { display: none; }
+    .bar-cta .short { display: inline; }
+  }
+</style>

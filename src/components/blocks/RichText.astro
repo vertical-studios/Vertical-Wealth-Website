@@ -1,0 +1,14 @@
+---
+import Buttons from "../Buttons.astro";
+import { richText } from "../../lib/richtext";
+import { tf } from "../../lib/tina";
+import { toneClass } from "../../lib/tone";
+const { heading, body, tone, buttons, anchor } = Astro.props;
+---
+<section class:list={["section rt", toneClass(tone)]} id={anchor || undefined} data-tina-field={tf(Astro.props)}>
+  <div class="wrap">
+    {heading && <h2 data-tina-field={tf(Astro.props, "heading")}>{heading}</h2>}
+    <div class="prose" data-tina-field={tf(Astro.props, "richBody")} set:html={richText(body)} />
+    <Buttons buttons={buttons} />
+  </div>
+</section>

@@ -1,0 +1,76 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+  noindex?: boolean;
+  settings: any;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+  image?: string;
+  ogType?: "website" | "article";
+}
+const { title, description, noindex, settings, schema, image, ogType = "website" } = Astro.props;
+// Clean URLs: build.format "file" makes Astro.url end in ".html"; Vercel serves them without it.
+const cleanPath =
+  Astro.url.pathname.replace(/\.html$/, "").replace(/\/index$/, "").replace(/\/$/, "") || "/";
+const canonical = new URL(cleanPath, Astro.site);
+const ogImage = image || settings.ogImage;
+const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+// Vertical Wealth's Google Tag Manager container. Set PUBLIC_GTM_ID in Vercel.
+// Tags fire on the real domain, and on previews only when Tag Assistant (gtm_debug) is open,
+// so preview traffic never pollutes reports.
+const GTM_ID = import.meta.env.PUBLIC_GTM_ID || "";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large"} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Vertical Wealth" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#000000" />
+    {settings.favicon && <link rel="icon" href={settings.favicon} />}
+    <link rel="alternate" type="application/rss+xml" title="Vertical Wealth Insights" href="/rss.xml" />
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin />
+    <link rel="preconnect" href="https://p.typekit.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Bebas Neue Pro: Adobe Fonts kit "Vertical Wealth Website" (xhb8qju), licensed for
+         verticalwealth.life, www.verticalwealth.life, *.vercel.app and localhost. -->
+    <link rel="stylesheet" href="https://use.typekit.net/xhb8qju.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" /></noscript>
+    {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+    {GTM_ID && (
+      <script is:inline define:vars={{ GTM_ID }}>
+        if (/(^|\.)verticalwealth\.life$/.test(location.hostname) || /[?&]gtm_debug=/.test(location.search)) {
+          (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true; j.src = "https://www.googletagmanager.com/gtm.js?id=" + i;
+            f.parentNode.insertBefore(j, f);
+          })(window, document, "script", "dataLayer", GTM_ID);
+        }
+      </script>
+    )}
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <Header settings={settings} />
+    <main id="main"><slot /></main>
+    <Footer settings={settings} />
+  </body>
+</html>

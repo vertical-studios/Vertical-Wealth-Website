@@ -1,0 +1,70 @@
+{
+  "title": "Terms of Service | Vertical Wealth",
+  "description": "The terms that govern your use of the Vertical Wealth website, including eligibility, intellectual property, disclaimers, liability and governing law.",
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "Legal",
+      "headline": "Terms of Service for Vertical Wealth"
+    },
+    {
+      "_template": "richText",
+      "body": "**Last Updated: September 18, 2026**\n\nWelcome to www.verticalwealth.life (the \"Website\"), operated by Vertical Wealth (\"we,\" \"us,\" or \"our\"), formerly known as legacywealth.life. These Terms of Service (\"Terms\") govern your access to and use of the Website, including any content, functionality, or financial advisory services offered through it. By accessing or using the Website, you agree to be bound by these Terms. If you do not agree with these Terms, please do not use the Website."
+    },
+    {
+      "_template": "richText",
+      "heading": "1. Use of the Website",
+      "body": "### a. Eligibility\n\nYou must be at least 18 years old to use the Website. By using the Website, you represent and warrant that you meet this age requirement and have the legal capacity to enter into these Terms.\n\n### b. Permitted Use\n\nYou may use the Website for lawful purposes only, such as accessing financial advice, educational content, or contacting us. You agree not to:\n\n- Use the Website in any way that violates applicable federal, state, or local laws or financial regulations.\n- Attempt to gain unauthorized access to any part of the Website, our servers, or systems.\n- Use the Website to transmit malicious code, viruses, or any harmful content.\n- Engage in any activity that interferes with or disrupts the Website's functionality.\n\n### c. Account Responsibility\n\nIf you create an account on the Website (e.g., for accessing personalized financial content or client portals), you are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account."
+    },
+    {
+      "_template": "richText",
+      "heading": "2. Services and Transactions",
+      "body": "### a. Financial Advisory Services\n\nThe Website provides information about our financial advisory services, including wealth management, investment advice, and financial planning. Any agreements for specific services will be governed by separate contracts or service agreements, which take precedence over these Terms in case of conflict.\n\n### b. Quotes and Payments\n\nQuotes or financial plans provided through the Website are estimates and subject to change based on your financial needs or market conditions. Payment terms for services will be outlined in separate service agreements or invoices.\n\n### c. No Financial Guarantees\n\nThe content and services on the Website are for informational purposes only and do not constitute a guarantee of financial outcomes. You are responsible for making your own financial decisions, and we recommend consulting with a qualified financial advisor before taking action."
+    },
+    {
+      "_template": "richText",
+      "heading": "3. Intellectual Property",
+      "body": "### a. Ownership\n\nAll content on the Website, including text, graphics, logos, images, financial tools, and software, is the property of Vertical Wealth or its licensors and is protected by copyright, trademark, and other intellectual property laws.\n\n### b. Limited License\n\nWe grant you a limited, non-exclusive, non-transferable, and revocable license to access and use the Website for personal or business purposes, subject to these Terms. You may not reproduce, distribute, modify, or create derivative works of any content without our prior written consent.\n\n### c. User Content\n\nIf you submit content to the Website (e.g., through contact forms, reviews, or feedback), you grant us a non-exclusive, worldwide, royalty-free license to use, reproduce, and display such content for the purpose of providing our services and improving the Website."
+    },
+    {
+      "_template": "richText",
+      "heading": "4. Third-Party Links and Services",
+      "body": "The Website may contain links to third-party websites or services, such as financial tools or partner platforms, that are not owned or controlled by Vertical Wealth. We are not responsible for the content, policies, or practices of these third-party sites or services. You access them at your own risk."
+    },
+    {
+      "_template": "richText",
+      "heading": "5. Disclaimer of Warranties",
+      "body": "The Website and its content are provided on an \"as is\" and \"as available\" basis without warranties of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not guarantee that the Website will be uninterrupted, error-free, or free from viruses or other harmful components. Financial information provided on the Website is general in nature and not tailored to your specific circumstances."
+    },
+    {
+      "_template": "richText",
+      "heading": "6. Limitation of Liability",
+      "body": "To the fullest extent permitted by law, Vertical Wealth, its affiliates, officers, directors, employees, or agents will not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the Website, including but not limited to financial losses, loss of data, or business opportunities. Our total liability for any claim arising from these Terms or your use of the Website will not exceed $100."
+    },
+    {
+      "_template": "richText",
+      "heading": "7. Indemnification",
+      "body": "You agree to indemnify, defend, and hold harmless Vertical Wealth, its affiliates, officers, directors, employees, and agents from any claims, liabilities, damages, losses, or expenses (including reasonable attorneys' fees) arising out of your use of the Website, violation of these Terms, or infringement of any third-party rights."
+    },
+    {
+      "_template": "richText",
+      "heading": "8. Termination",
+      "body": "We reserve the right to suspend or terminate your access to the Website at our sole discretion, without notice, for any reason, including if we believe you have violated these Terms. Upon termination, your right to use the Website will cease immediately."
+    },
+    {
+      "_template": "richText",
+      "heading": "9. Changes to These Terms",
+      "body": "We may update these Terms to reflect changes in our practices, legal requirements, or the rebranding from legacywealth.life to verticalwealth.life. We will notify you of significant changes by posting the updated Terms on the Website with a revised \"Last Updated\" date. Your continued use of the Website after such changes constitutes your acceptance of the revised Terms."
+    },
+    {
+      "_template": "richText",
+      "heading": "10. Governing Law and Dispute Resolution",
+      "body": "These Terms are governed by the laws of the State of Indiana, without regard to its conflict of law principles. Any disputes arising out of or related to these Terms or the Website will be resolved exclusively in the state or federal courts located in Indianapolis, Indiana. You agree to submit to the jurisdiction of these courts."
+    },
+    {
+      "_template": "richText",
+      "heading": "11. Contact Us",
+      "body": "If you have any questions or concerns about these Terms, please contact us at:\n\n**Vertical Wealth**\n\nEmail: [info@verticalwealth.life](mailto:info@verticalwealth.life)\n\nAddress: 10330 N Meridian St Suite 300, Indianapolis, IN 46290\n\nPhone: [(317) 794-2148](tel:+13177942148)"
+    }
+  ]
+}

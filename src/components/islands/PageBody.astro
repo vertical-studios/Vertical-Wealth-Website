@@ -1,0 +1,8 @@
+---
+// All sections of a page. Rendered at build time and again by
+// /tina-island/page while someone edits, so both must stay identical.
+import BlockRenderer from "../BlockRenderer.astro";
+import { toBlocks } from "../../lib/tina";
+const { page, blocks } = Astro.props as { page?: any; blocks?: any[] };
+---
+<BlockRenderer blocks={blocks ?? toBlocks(page)} />

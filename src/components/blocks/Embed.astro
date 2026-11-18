@@ -1,0 +1,44 @@
+---
+// HighLevel forms and calendars load when the visitor scrolls near them.
+import { tf } from "../../lib/tina";
+import { toneClass } from "../../lib/tone";
+const { heading, body, kind = "form", widgetId, height, anchor, tone = "white" } = Astro.props;
+const src = `https://api.leadconnectorhq.com/widget/${kind === "booking" ? "booking" : "form"}/${widgetId}`;
+const h = height || 720;
+---
+<section class:list={["section embed", toneClass(tone)]} id={anchor || undefined} data-tina-field={tf(Astro.props)}>
+  <div class="wrap inner">
+    <div class="copy">
+      {heading && <h2 data-tina-field={tf(Astro.props, "heading")}>{heading}</h2>}
+      {body && <p class="lede" data-tina-field={tf(Astro.props, "body")}>{body}</p>}
+    </div>
+    <div class="frame" style={`min-height:${h}px`} data-hl-src={src} data-hl-id={widgetId} data-hl-h={h} data-tina-field={tf(Astro.props, "widgetId")}>
+      <noscript><a href={src}>Open the {kind === "booking" ? "calendar" : "form"}</a></noscript>
+      <p class="loading">Loading the {kind === "booking" ? "calendar" : "form"}</p>
+    </div>
+  </div>
+</section>
+<script>
+  const load = (el: HTMLElement) => {
+    if (el.dataset.loaded) return;
+    el.dataset.loaded = "1";
+    const f = document.createElement("iframe");
+    f.src = el.dataset.hlSrc!; f.id = "inline-" + el.dataset.hlId; f.title = "Form";
+    f.style.cssText = `width:100%;height:${el.dataset.hlH}px;border:none;display:block`;
+    el.replaceChildren(f);
+    if (!document.querySelector('script[src*="form_embed.js"]')) {
+      const s = document.createElement("script"); s.src = "https://link.msgsndr.com/js/form_embed.js"; s.async = true; document.body.appendChild(s);
+    }
+  };
+  const frames = document.querySelectorAll<HTMLElement>("[data-hl-src]");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { load(e.target as HTMLElement); io.unobserve(e.target); } }), { rootMargin: "600px 0px" });
+    frames.forEach((f) => io.observe(f));
+  } else frames.forEach(load);
+</script>
+<style>
+  .inner { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(32px, 5vw, 72px); align-items: start; }
+  .frame { background: var(--white); border: 2px solid var(--black);  }
+  .loading { padding: 24px; color: var(--black); font-weight: 500; }
+  @media (max-width: 900px) { .inner { grid-template-columns: 1fr; } }
+</style>

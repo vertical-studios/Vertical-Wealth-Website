@@ -1,0 +1,27 @@
+{
+  "name": "vertical-wealth-site",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "tinacms dev -c \"astro dev\"",
+    "build": "node scripts/build.mjs",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/markdown-satteri": "^0.4.7",
+    "@astrojs/node": "^11.1.12",
+    "@astrojs/vercel": "^11.0.21",
+    "@tinacms/astro": "^0.8.0",
+    "@tinacms/cli": "^4.0.5",
+    "astro": "^7.4.8",
+    "marked": "^18.1.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tinacms": "^3.15.2"
+  },
+  "type": "module",
+  "private": true
+}

@@ -1,0 +1,23 @@
+---
+import PostCard from "../PostCard.astro";
+import { getPosts } from "../../lib/posts";
+import { tf } from "../../lib/tina";
+import { toneClass } from "../../lib/tone";
+const { heading, category, limit, tone } = Astro.props;
+const posts = (await getPosts()).filter((p) => !category || p.data.category === category).slice(0, limit || 3);
+---
+{posts.length > 0 && (
+  <section class:list={["section posts", toneClass(tone)]} data-tina-field={tf(Astro.props)}>
+    <div class="wrap">
+      <div class="head">
+        {heading && <h2 data-tina-field={tf(Astro.props, "heading")}>{heading}</h2>}
+        <a class="btn btn-secondary" href="/blog">All articles</a>
+      </div>
+      <div class="grid">{posts.map((p) => <PostCard post={p} />)}</div>
+    </div>
+  </section>
+)}
+<style>
+  .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 28px; margin-top: 36px; }
+</style>

@@ -1,0 +1,29 @@
+{
+  "title": "Disclosures | Vertical Wealth",
+  "description": "Important disclosures from Vertical Wealth about general information, investment risk, how our advisory fees work and how to request our Form ADV.",
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "Legal",
+      "headline": "Disclosures",
+      "body": "Important information about this website, our services and how we're paid."
+    },
+    {
+      "_template": "richText",
+      "heading": "Important information",
+      "body": "Vertical Wealth is not giving you personalized investment or financial planning advice here, only general information. Personalized advice is only given after signing a client advising contract with us and the initial payment of fees by you.\n\nTrust and investment management accounts and services offered by Vertical Wealth are not insured by the FDIC or any other federal government agency, are not deposits or other obligations of, nor guaranteed by any bank or bank affiliate, and are subject to investment risk, including possible loss of the principal amount invested. Past performance is not indicative of future performance or success.\n\nCFP Board owns the certification marks CFP® and CERTIFIED FINANCIAL PLANNER® in the U.S."
+    },
+    {
+      "_template": "richText",
+      "heading": "Fees and Form ADV",
+      "anchor": "fees",
+      "body": "Our advisory fees are a percentage of the assets we manage.\n\nOur Form ADV brochure describes our services, fees and conflicts of interest. It's available on request. Call [(317) 794-2148](tel:+13177942148) or email [info@verticalwealth.life](mailto:info@verticalwealth.life) and we'll send you a copy."
+    },
+    {
+      "_template": "richText",
+      "heading": "Look up an advisor",
+      "anchor": "look-up",
+      "body": "Anyone can research a financial professional on the SEC's Investment Adviser Public Disclosure website at [adviserinfo.sec.gov](https://adviserinfo.sec.gov)."
+    }
+  ]
+}

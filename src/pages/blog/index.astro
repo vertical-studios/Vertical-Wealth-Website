@@ -1,0 +1,73 @@
+---
+import { getEntry } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import PostCard from "../../components/PostCard.astro";
+import { getPosts, postUrl } from "../../lib/posts";
+import { CATEGORIES } from "../../content.config";
+
+const settings = (await getEntry("settings", "site"))!.data as any;
+const posts = await getPosts();
+const used = CATEGORIES.filter((c) => posts.some((p) => p.data.category === c));
+const site = "https://www.verticalwealth.life";
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Vertical Wealth Insights",
+  url: `${site}/blog`,
+  publisher: { "@type": "Organization", "@id": `${site}/#organization`, name: "Vertical Wealth", url: site },
+  blogPost: posts.map((p) => ({
+    "@type": "BlogPosting",
+    headline: p.data.title,
+    url: `${site}${postUrl(p)}`,
+    datePublished: p.data.date.toISOString(),
+  })),
+};
+---
+<Base
+  title="Insights on Faith and Money | Vertical Wealth"
+  description="Plain-spoken articles on stewardship, planning and giving from Vertical Wealth, a fiduciary financial planning firm in Indianapolis."
+  settings={settings}
+  schema={schema}
+>
+  <section class="intro on-white">
+    <div class="wrap">
+      <p class="tag">Insights</p>
+      <h1>Faith and money, in plain words</h1>
+      <p class="lede">Short reads on stewardship, planning and giving. General information to help you think clearly, never personal advice.</p>
+    </div>
+  </section>
+
+  <section class="section list" aria-labelledby="all-articles">
+    <div class="wrap">
+      <h2 id="all-articles" class="sr-only">All articles</h2>
+      {used.length > 1 && (
+        <div class="filters" role="group" aria-label="Filter by topic">
+          <button class="chip" aria-pressed="true" data-filter="all">All</button>
+          {used.map((c) => <button class="chip" aria-pressed="false" data-filter={c}>{c}</button>)}
+        </div>
+      )}
+      <div class="grid">{posts.map((p) => <PostCard post={p} />)}</div>
+      {posts.length === 0 && <p>New articles are on the way.</p>}
+    </div>
+  </section>
+</Base>
+
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>(".chip");
+  const cards = document.querySelectorAll<HTMLElement>(".grid > article");
+  chips.forEach((chip) =>
+    chip.addEventListener("click", () => {
+      const f = chip.dataset.filter;
+      chips.forEach((c) => c.setAttribute("aria-pressed", String(c === chip)));
+      cards.forEach((card) => (card.hidden = f !== "all" && card.dataset.category !== f));
+    })
+  );
+</script>
+
+<style>
+  .intro { padding-block: clamp(48px, 7vw, 96px) clamp(24px, 3vw, 40px); }
+  .filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+  .chip { min-height: 44px; border: 2px solid var(--black); background: transparent; padding: 8px 16px 6px; font: 600 1.25rem/1 var(--display); letter-spacing: var(--track); cursor: pointer; }
+  .chip[aria-pressed="true"] { background: var(--purple); border-color: var(--purple); color: var(--white); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 32px; }
+</style>

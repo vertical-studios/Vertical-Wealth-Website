@@ -1,0 +1,37 @@
+---
+import Buttons from "../Buttons.astro";
+import { richText } from "../../lib/richtext";
+import { sized, srcset } from "../../lib/img";
+import { tf } from "../../lib/tina";
+import { toneClass } from "../../lib/tone";
+const { heading, body, bullets = [], image, imageAlt, imageSide = "right", buttons, tone, anchor } = Astro.props;
+---
+<section class:list={["section it", toneClass(tone)]} id={anchor || undefined} data-tina-field={tf(Astro.props)}>
+  <div class:list={["wrap grid", { flip: imageSide === "left", solo: !image }]}>
+    <div class="copy">
+      {heading && <h2 data-tina-field={tf(Astro.props, "heading")}>{heading}</h2>}
+      {body && <div class="prose" data-tina-field={tf(Astro.props, "richBody")} set:html={richText(body)} />}
+      {bullets && bullets.length > 0 && (
+        <ul class="ticks">{bullets.map((b: string, i: number) => <li data-tina-field={tf(Astro.props, "bullets", i)}>{b}</li>)}</ul>
+      )}
+      <Buttons buttons={buttons} />
+    </div>
+    {image && (
+      <figure class="media" data-tina-field={tf(Astro.props, "image")}>
+        <img class="photo" src={sized(image, 1500)} srcset={srcset(image)} sizes="(max-width: 900px) 100vw, 50vw" alt={imageAlt || ""} loading="lazy" />
+      </figure>
+    )}
+  </div>
+</section>
+<style>
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+  .grid.solo { grid-template-columns: minmax(0, 820px); }
+  .flip .media { order: -1; }
+  .copy { min-width: 0; }
+  .media { margin: 0;  }
+  .media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .ticks { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; }
+  .ticks li { position: relative; padding-left: 26px; font-weight: 500; }
+  .ticks li::before { content: ""; position: absolute; left: 0; top: 0.45em; width: 12px; height: 12px; background: var(--accent); }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .flip .media { order: 0; } }
+</style>

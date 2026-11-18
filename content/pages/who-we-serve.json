@@ -1,0 +1,144 @@
+{
+  "title": "Who We Serve | Vertical Wealth",
+  "description": "Christian financial planning for busy professionals, established stewards, couples nearing retirement, business owners and anyone who has lost a spouse.",
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "Who we serve",
+      "headline": "Planning for every season",
+      "body": "People often come to us at a turning point. A career that leaves no time to plan. Retirement a few years out. A business sale on the horizon. A loss that changes everything. Wherever you are, we help you see the whole picture and plan with purpose.",
+      "buttons": [
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "primary"
+        },
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "imageText",
+      "heading": "Busy professionals",
+      "tone": "black",
+      "anchor": "professionals",
+      "body": "You're a physician, attorney or executive, likely somewhere in your mid-30s to mid-40s. Your career is moving fast and your income has grown. So has the complexity. There's an old 401(k) from a past job, maybe two. Taxes take a bigger bite every year. Saving for college, paying down debt and planning for retirement all compete for the same dollars. And your faith shapes your family, your church and your work, but it hasn't touched your portfolio yet.\n\nYou want it handled well, by people who share your values, without it becoming a second job.\n\nThat's where we come in. We bring the pieces together into one clear plan, help you navigate taxes and investments as a high earner, and put biblical principles at the center of how you save, spend and give. You can be as hands-on or hands-off as you like.\n\nAlong the way, we'll help you answer the big questions. When is enough truly enough? Bigger barns, or heavenly treasure? (Luke 12:16-21)",
+      "bullets": [
+        "A clear plan for old 401(k)s from past jobs",
+        "Help navigating taxes and investments as your income grows",
+        "One picture for college savings, debt and retirement",
+        "A giving plan that reflects your faith",
+        "Protection and estate planning for the people who depend on you"
+      ],
+      "buttons": [
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "primary"
+        },
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "imageText",
+      "heading": "Established stewards",
+      "anchor": "established",
+      "body": "You're in your late 40s or 50s. You've worked hard, saved and invested for years, and the stakes feel higher now. You'd rather not manage it all yourself. You want it handled, by an advisor who knows your story and keeps you informed in plain language.\n\nWe take the day-to-day off your plate. Our team manages your portfolio, keeps your plan current as life changes and coordinates with your other professionals as needed. We meet as often as you'd like, whether that's regularly or a few check-ins a year.\n\nAnd we help you think about what it's all for, from your family and your giving to the legacy you want to leave.",
+      "bullets": [
+        "Ongoing portfolio management by our team",
+        "One plan that brings investments, taxes, insurance and estate together",
+        "Check-ins on your schedule, with clear updates",
+        "A giving strategy that reflects your values"
+      ],
+      "buttons": [
+        {
+          "label": "See how it works",
+          "href": "/how-it-works",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "imageText",
+      "heading": "Couples nearing retirement",
+      "tone": "purple",
+      "anchor": "retirement",
+      "body": "You and your spouse are a few years from retirement, and the questions are changing. How much is enough? When can we stop working? How will our savings become income? And what do we want to leave behind, for our family and for the Kingdom?\n\nThis is the shift from building wealth to building a legacy. We help you plan the move from saving to spending, think through income and taxes, and put estate and giving plans in place that reflect what you value most.",
+      "bullets": [
+        "A retirement income plan built around your goals",
+        "Clarity on how much is enough",
+        "An estate plan that maps out your wishes",
+        "Giving strategies for this next season"
+      ],
+      "buttons": [
+        {
+          "label": "Explore our services",
+          "href": "/services",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "imageText",
+      "heading": "Business owners in transition",
+      "tone": "black",
+      "anchor": "business-owners",
+      "body": "You've spent years building a business. Now a sale or transition is on the horizon, and the biggest question is what comes next. What should the proceeds do? How do you care for your family through the change? And how could this season fund the generosity you've long wanted to practice?\n\nWe help you plan ahead, so the big decisions aren't rushed. We look at how the proceeds fit your whole plan, from investments and taxes to estate and giving, and coordinate with your other professionals along the way. Our business development and transitions service adds coaching and tools to help you build, grow and transition well.",
+      "bullets": [
+        "Planning for the proceeds before the sale",
+        "Coordination with your other professionals",
+        "A plan for your family, your legacy and your giving after the transition"
+      ],
+      "buttons": [
+        {
+          "label": "See our services",
+          "href": "/services",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "imageText",
+      "heading": "After losing a spouse",
+      "anchor": "loss",
+      "body": "Losing a spouse changes everything. If they were the one who handled the money, the accounts and decisions can feel overwhelming at a time when you have little energy to give them.\n\nWe keep things simple. We'll help you sort out what needs attention now and what can wait, explain each step in plain language, and take on as much of the work as you'd like. We go at your pace, and there's no pressure to make big decisions quickly.\n\nWe know trust is earned. That's why it starts with a short, no-pressure conversation. When you're ready, we'll help you build a plan that fits your life now.",
+      "bullets": [
+        "Help sorting out what needs attention first",
+        "Plain-language answers about accounts and options",
+        "One team you can call with any question"
+      ],
+      "buttons": [
+        {
+          "label": "Talk with Brian",
+          "href": "/book-a-call",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "ctaBanner",
+      "heading": "Wherever you are, start here",
+      "tone": "purple",
+      "body": "Get Weekly Lessons, one short email each week with scripture and one idea you can use. When you're ready, book a 15-minute, no-pressure discovery call with Brian. No statements needed.",
+      "buttons": [
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "primary"
+        },
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "secondary"
+        }
+      ]
+    }
+  ]
+}

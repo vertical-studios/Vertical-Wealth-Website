@@ -1,0 +1,252 @@
+{
+  "title": "Christian Financial Planning in Indianapolis | Vertical Wealth",
+  "description": "Fiduciary, fee-based financial planning for Christian families and busy professionals in Indianapolis. Plan, invest and give with purpose.",
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "Financial planning for Christian families",
+      "headline": "Live boldly. Give generously. Leave a legacy.",
+      "body": "Fiduciary, fee-based planning and investing for busy Christian professionals who want their money to serve their family and the Kingdom.",
+      "image": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/ada9b915-580d-4653-9f07-1aee98ce82d6/14+%281%29.jpg",
+      "imageAlt": "Brian Wheeler, founder of Vertical Wealth",
+      "buttons": [
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "primary"
+        },
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "cards",
+      "heading": "From uncertainty to impact",
+      "style": "plain",
+      "items": [
+        {
+          "title": "Clarity",
+          "body": "Understand your finances and learn to see them through a biblical lens."
+        },
+        {
+          "title": "Confidence",
+          "body": "Make decisions without the anxiety, whether you like to be hands-on or hands-off."
+        },
+        {
+          "title": "Calling",
+          "body": "Put what you've been given to work for Kingdom impact."
+        }
+      ]
+    },
+    {
+      "_template": "imageText",
+      "heading": "Bigger barns, or heavenly treasure?",
+      "tone": "black",
+      "body": "Many Christians feel a tension. You have a heart for generosity and a desire to make a Kingdom impact, but career, family and the complexity of 401(k)s, taxes and college savings keep pushing it to someday.\n\nWe help you answer the big questions. When is enough truly enough? And how can you use your wealth to build heavenly treasure instead of just bigger barns? (Luke 12:16-21)",
+      "bullets": [
+        "No more wondering what to do with old 401(k)s from past jobs",
+        "Advisors who help you navigate taxes and investments as a high earner",
+        "Biblical insight to put your resources to work for your family and the Kingdom"
+      ],
+      "buttons": [
+        {
+          "label": "Our approach",
+          "href": "/our-approach",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "cards",
+      "heading": "Who we serve",
+      "body": "Most of our clients come to us at one of these moments.",
+      "style": "boxed",
+      "items": [
+        {
+          "title": "Busy professionals",
+          "body": "Physicians, attorneys and executives with old 401(k)s, heavy taxes and no time to sort it out.",
+          "linkLabel": "Read more",
+          "linkHref": "/who-we-serve#professionals"
+        },
+        {
+          "title": "Business owners",
+          "body": "Planning a sale or a transition, and asking what the proceeds should do next.",
+          "linkLabel": "Read more",
+          "linkHref": "/who-we-serve#business-owners"
+        },
+        {
+          "title": "Nearing retirement",
+          "body": "A few years out and ready to move from building wealth to building a legacy.",
+          "linkLabel": "Read more",
+          "linkHref": "/who-we-serve#retirement"
+        },
+        {
+          "title": "Facing a loss",
+          "body": "When the person you leaned on for money decisions is gone, we keep things simple and clear.",
+          "linkLabel": "Read more",
+          "linkHref": "/who-we-serve#loss"
+        }
+      ]
+    },
+    {
+      "_template": "steps",
+      "heading": "How it works",
+      "tone": "purple",
+      "body": "A transparent, relational process designed to build trust at every step.",
+      "items": [
+        "Discovery call: 15 minutes, no pressure. Tell us your story, your goals and your biggest questions. No statements needed.",
+        "Deep dive: 1 to 2 hours. We gather the details, ask about your values, hopes and dreams, and analyze the full picture.",
+        "Strategy and implementation: a clear, customized plan, then help putting it into action alongside your other professionals.",
+        "Ongoing guidance: check-ins as often as you need, adjustments as life happens, and encouragement to live into all God has for you."
+      ],
+      "buttons": [
+        {
+          "label": "See how it works",
+          "href": "/how-it-works",
+          "style": "primary"
+        }
+      ]
+    },
+    {
+      "_template": "cards",
+      "heading": "What we do",
+      "body": "A holistic, values-driven approach. Our service is fiduciary and fee-based.",
+      "style": "plain",
+      "items": [
+        {
+          "title": "Wealth plan",
+          "body": "Evaluate where you are today and build a plan to reach your goals and dreams."
+        },
+        {
+          "title": "Portfolio management",
+          "body": "Growth and preservation through diversification, asset allocation and long-term strategies."
+        },
+        {
+          "title": "Estate planning",
+          "body": "A road map of your wishes, so you can leave the legacy you intend."
+        },
+        {
+          "title": "Life goals blueprinting",
+          "body": "A deeper look at your purpose and passions, brought into line with your plan."
+        },
+        {
+          "title": "Risk management",
+          "body": "Find the gaps that could set you back, then put the right protection in place."
+        },
+        {
+          "title": "Business transitions",
+          "body": "Coaching and tools to build, grow and transition a business well."
+        }
+      ],
+      "buttons": [
+        {
+          "label": "All services",
+          "href": "/services",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "cards",
+      "heading": "Meet your advisors",
+      "tone": "black",
+      "style": "boxed",
+      "body": "Your advisor should be more than a number-cruncher. They should be a wise counselor who shares your values.",
+      "items": [
+        {
+          "image": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/ada9b915-580d-4653-9f07-1aee98ce82d6/14+%281%29.jpg",
+          "imageAlt": "Brian Wheeler",
+          "eyebrow": "Chief Vision Officer and Financial Planner",
+          "title": "Brian Wheeler",
+          "body": "In the financial business since 2000. Brian founded Vertical Wealth at his dining room table to build a fee-based, holistic planning group."
+        },
+        {
+          "image": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/3fb2a60f-6a97-48e5-9e34-bed5e3e98b25/02+%281%29.jpg",
+          "imageAlt": "Chris Herrmann",
+          "eyebrow": "Wealth Advisor",
+          "title": "Chris Herrmann",
+          "body": "More than 25 years in financial planning, investment management, banking and training."
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Meet the team",
+          "href": "/team",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "verse",
+      "text": "For where your treasure is, there your heart will be also.",
+      "reference": "Luke 12:34",
+      "tone": "purple"
+    },
+    {
+      "_template": "embed",
+      "heading": "This isn't just about money",
+      "kind": "form",
+      "widgetId": "Tleyh88lPOLOomyni9i8",
+      "height": 495,
+      "anchor": "weekly-lessons",
+      "body": "Get Weekly Lessons: one short email with scripture, a thought from Brian and one step you can take that week. It's free, and you can unsubscribe any time."
+    },
+    {
+      "_template": "cards",
+      "heading": "Part of Vertical Life",
+      "tone": "black",
+      "style": "plain",
+      "body": "Vertical Wealth is one of the Kingdom-minded companies of Vertical Life, based at the Atrium on N Meridian St.",
+      "items": [
+        {
+          "image": "https://images.squarespace-cdn.com/content/v1/6628083a88405b4d0f29bf6f/375f3854-3eb0-4eea-9c20-f84e2037de9e/VL+white+bold+yellow+horizontal.png?format=750w",
+          "imageAlt": "Vertical Life",
+          "imageIsLogo": true,
+          "title": "Vertical Life",
+          "body": "The parent ecosystem and the Atrium, coworking for Kingdom-minded businesses.",
+          "linkLabel": "Visit Vertical Life",
+          "linkHref": "https://thevertical.life"
+        },
+        {
+          "image": "https://images.squarespace-cdn.com/content/v1/667c450ccef1c76b7cebfd4c/2e824f74-41c8-4889-ba82-b4ec779676ad/VI+white+bold+yellow+horizontal.png?format=750w",
+          "imageAlt": "Vertical Immersive",
+          "imageIsLogo": true,
+          "title": "Vertical Immersive",
+          "body": "A two-year program preparing young adults through faith-driven study and mentorship.",
+          "linkLabel": "Visit Vertical Immersive",
+          "linkHref": "https://www.verticalimmersive.life/"
+        },
+        {
+          "image": "https://images.squarespace-cdn.com/content/v1/6628083a88405b4d0f29bf6f/3d25ed0c-15fb-421e-9725-f759edebcb04/VS+white+bold+yellow+horizontal.png?format=750w",
+          "imageAlt": "Vertical Studios",
+          "imageIsLogo": true,
+          "title": "Vertical Studios",
+          "body": "A creative hub for media, content and marketing.",
+          "linkLabel": "Visit Vertical Studios",
+          "linkHref": "https://www.verticalstudios.life/"
+        }
+      ]
+    },
+    {
+      "_template": "ctaBanner",
+      "heading": "Get clarity over complexity",
+      "tone": "purple",
+      "body": "Book a 15-minute, no-pressure discovery call with Brian. Bring your questions; there's no need to bring statements.",
+      "buttons": [
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "primary"
+        },
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "secondary"
+        }
+      ]
+    }
+  ]
+}

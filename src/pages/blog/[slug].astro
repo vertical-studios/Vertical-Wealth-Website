@@ -1,0 +1,125 @@
+---
+import { getEntry, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import PostCard from "../../components/PostCard.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import PostArticle from "../../components/islands/PostArticle.astro";
+import { islands } from "../../lib/islands";
+import { getPosts, postUrl, type Post } from "../../lib/posts";
+import { sized } from "../../lib/img";
+import { plainText } from "../../lib/richtext";
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props as { post: Post };
+const d = post.data;
+const settings = (await getEntry("settings", "site"))!.data as any;
+const { Content } = await render(post);
+const all = await getPosts();
+const related = [
+  ...all.filter((p) => p.id !== post.id && p.data.category === d.category),
+  ...all.filter((p) => p.id !== post.id && p.data.category !== d.category),
+].slice(0, 3);
+
+const site = "https://www.verticalwealth.life";
+const url = `${site}${postUrl(post)}`;
+// Keep <title> within ~65 chars: drop the brand suffix when the headline is long.
+const SUFFIX = " | Vertical Wealth";
+const pageTitle = d.title.length + SUFFIX.length <= 65 ? d.title + SUFFIX : d.title;
+const schema: Record<string, unknown>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: d.title,
+    description: d.description,
+    datePublished: d.date.toISOString(),
+    dateModified: (d.updated || d.date).toISOString(),
+    author: { "@type": "Organization", name: d.author, url: site },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${site}/#organization`,
+      name: "Vertical Wealth",
+      url: site,
+      logo: {
+        "@type": "ImageObject",
+        url: settings.logo,
+      },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    url,
+    articleSection: d.category,
+    inLanguage: "en-US",
+    ...(d.image ? { image: sized(d.image, 1500) } : {}),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${site}/blog` },
+      { "@type": "ListItem", position: 3, name: d.title, item: url },
+    ],
+  },
+];
+if (d.faqs?.length) {
+  schema.push({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: d.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: plainText(f.answer) },
+    })),
+  });
+}
+---
+<Base
+  title={pageTitle}
+  description={d.description}
+  settings={settings}
+  schema={schema}
+  image={d.image ? sized(d.image, 1500) : undefined}
+  ogType="article"
+>
+  <article>
+    <TinaIsland name="post" wrapper={islands.post.wrapper} params={{ slug: post.id }} primary>
+      <PostArticle post={d} body={post.body}>
+        <Content slot="body" />
+      </PostArticle>
+    </TinaIsland>
+
+    {settings.disclosures?.[0] && (
+      <div class="wrap narrow disc"><p class="fine">{settings.disclosures[0]}</p></div>
+    )}
+
+    <aside class="next on-purple">
+      <div class="wrap narrow">
+        <h2>One idea each week, free</h2>
+        <p class="lede">Weekly Lessons: a short email with scripture, a thought from Brian and one step you can take this week. Unsubscribe any time.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="/weekly-lessons">Get Weekly Lessons</a>
+          <a class="btn btn-secondary" href="/book-a-call">Book a discovery call</a>
+        </div>
+      </div>
+    </aside>
+  </article>
+
+  {related.length > 0 && (
+    <section class="section related">
+      <div class="wrap">
+        <h2>Keep reading</h2>
+        <div class="grid">{related.map((p) => <PostCard post={p} />)}</div>
+      </div>
+    </section>
+  )}
+</Base>
+
+<style>
+  .narrow { max-width: 760px; }
+  .next { padding-block: clamp(56px, 8vw, 96px); }
+  .disc { padding-bottom: clamp(40px, 6vw, 64px); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-top: 24px; }
+</style>

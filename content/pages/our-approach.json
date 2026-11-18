@@ -1,0 +1,125 @@
+{
+  "title": "Our Approach to Biblical Stewardship | Vertical Wealth",
+  "description": "Why faith shapes our advice. The four biblical stewardship principles and five values behind every financial plan at Vertical Wealth in Indianapolis.",
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "Our approach",
+      "headline": "Why faith shapes our advice",
+      "body": "In a world of shifting values, we ground our advice in timeless truth. A few core biblical principles shape how we see wealth, purpose and stewardship, and they shape every plan we build.",
+      "buttons": [
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "primary"
+        },
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "richText",
+      "heading": "Whose money is it?",
+      "tone": "black",
+      "body": "We start with that question, because the answer shapes everything else. We believe everything we have comes from God, and we're called to manage it well.\n\nThat belief changes the questions we ask. Along with what you have, we want to know what it's for, how much is enough, and how your resources can serve your family and the Kingdom.\n\nSo we begin with your story, your values and your calling. Then we do the careful technical work on investments, taxes, retirement, estate and giving. Faith gives the plan its purpose. Good planning helps you live it out."
+    },
+    {
+      "_template": "cards",
+      "heading": "Four guiding principles",
+      "body": "Our principles for biblical stewardship guide how we plan, invest and give, for our clients and for ourselves.",
+      "style": "boxed",
+      "anchor": "principles",
+      "items": [
+        {
+          "eyebrow": "Principle 1",
+          "title": "God owns it all",
+          "body": "Our starting point is simple. God is the owner, and we are His managers. That changes everything. (Psalm 24:1)"
+        },
+        {
+          "eyebrow": "Principle 2",
+          "title": "Seek contentment, not just more",
+          "body": "We challenge ourselves and our clients to ask, \"When is enough, enough?\" and to shift our focus from earthly treasure to being rich toward God. (Luke 12:16-21)"
+        },
+        {
+          "eyebrow": "Principle 3",
+          "title": "Live with an open hand",
+          "body": "We believe in moving from a scarcity mindset, the fear of running out, to an abundance mindset that trusts in God's provision. That trust frees us to be radically generous."
+        },
+        {
+          "eyebrow": "Principle 4",
+          "title": "Your life is an adventure",
+          "body": "We believe God wants to do immeasurably more through you than you can ask or imagine (Ephesians 3:20). Our job is to help you align your resources with that God-sized adventure."
+        }
+      ]
+    },
+    {
+      "_template": "verse",
+      "text": "Our mission is to equip faith-driven families and businesses to step boldly into their calling.",
+      "reference": "Our mission",
+      "tone": "purple"
+    },
+    {
+      "_template": "cards",
+      "heading": "Our Vertical values",
+      "body": "We want to help you put the full capacity of your time, talent and treasure to work for an adventurous life of purpose, impact and eternal legacy. Five values guide how we serve you.",
+      "tone": "black",
+      "style": "plain",
+      "anchor": "values",
+      "items": [
+        {
+          "title": "Intention",
+          "body": "**We live purposely rooted in faith to honor the Lord.**\n\nWe approach every plan with purpose, knowing each decision reflects stewardship of what God has entrusted to us and to our clients. We focus on what matters most, helping clients align their wealth with their values, vision and calling."
+        },
+        {
+          "title": "Service",
+          "body": "**We have a servant's heart for generosity and excellence.**\n\nWe serve our clients, teammates and partners with excellence, humility and clarity. Our goal is to be trustworthy stewards and thoughtful guides, generous with our time, our attention and our expertise."
+        },
+        {
+          "title": "Innovation",
+          "body": "**We pursue creativity and progress, embracing new ideas and approaches as image bearers of our Creator.**\n\nWe embrace evolving tools and creative strategies to serve with wisdom and forward thinking. Every financial plan, giving strategy or coaching moment is a chance to reimagine what's possible with faith and excellence at the center."
+        },
+        {
+          "title": "Transformation",
+          "body": "**We are storytellers of growth to a more abundant life in Christ.**\n\nWe believe financial stewardship is a catalyst for personal, spiritual and generational transformation. Our role is to guide clients through growth, where clarity replaces confusion, purpose replaces fear and legacy replaces limitation."
+        },
+        {
+          "title": "Achievement",
+          "body": "**We accomplish immeasurably more according to His power at work in us.**\n\nWe aim for results that reflect both wise financial stewardship and Kingdom-aligned impact. (Ephesians 3:20)"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Meet the team",
+          "href": "/team",
+          "style": "secondary"
+        },
+        {
+          "label": "See our services",
+          "href": "/services",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "ctaBanner",
+      "heading": "Put these principles to work",
+      "tone": "purple",
+      "body": "Start with Weekly Lessons, one short email each week with scripture and one idea you can use. When you're ready, book a 15-minute, no-pressure discovery call with Brian.",
+      "buttons": [
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "primary"
+        },
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "secondary"
+        }
+      ]
+    }
+  ]
+}

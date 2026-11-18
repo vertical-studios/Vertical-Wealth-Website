@@ -1,0 +1,83 @@
+{
+  "title": "Contact Our Indianapolis Office | Vertical Wealth",
+  "description": "Call, email or visit Vertical Wealth at the Atrium on N Meridian St in Indianapolis, or book a 15-minute discovery call with Brian Wheeler online.",
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "Contact",
+      "headline": "We'd love to hear from you",
+      "body": "Call, email or stop by our office at the Atrium. If you're ready to talk about your plan, the simplest first step is a 15-minute discovery call with Brian.",
+      "buttons": [
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "primary"
+        },
+        {
+          "label": "Call (317) 794-2148",
+          "href": "tel:+13177942148",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "cards",
+      "heading": "Get in touch",
+      "style": "boxed",
+      "items": [
+        {
+          "title": "Phone",
+          "body": "[(317) 794-2148](tel:+13177942148)"
+        },
+        {
+          "title": "Email",
+          "body": "[info@verticalwealth.life](mailto:info@verticalwealth.life)"
+        },
+        {
+          "title": "Office",
+          "body": "At the Atrium, Vertical Life's building  \n10330 N Meridian St, Ste 300  \nIndianapolis, IN 46290\n\nPlanning a visit? Call or email first so we're ready for you."
+        }
+      ]
+    },
+    {
+      "_template": "cards",
+      "heading": "Client logins",
+      "body": "Already a client? Log in to see your plan or your accounts.",
+      "tone": "black",
+      "style": "plain",
+      "anchor": "client-logins",
+      "items": [
+        {
+          "title": "Planning",
+          "body": "Your financial plan in MoneyGuidePro.",
+          "linkLabel": "Log in to Planning",
+          "linkHref": "https://www.moneyguidepro.com/ifa/Guests.aspx?gst=&sDestPage=10032"
+        },
+        {
+          "title": "Accounts",
+          "body": "Your investment accounts at Schwab.",
+          "linkLabel": "Log in to Accounts",
+          "linkHref": "https://client.schwab.com/Areas/Access/Login"
+        }
+      ]
+    },
+    {
+      "_template": "ctaBanner",
+      "heading": "Ready to talk about your plan?",
+      "body": "Book a 15-minute, no-pressure discovery call with Brian. Tell us your story and your biggest questions. No statements needed.",
+      "tone": "purple",
+      "buttons": [
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "primary"
+        },
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "secondary"
+        }
+      ]
+    }
+  ]
+}

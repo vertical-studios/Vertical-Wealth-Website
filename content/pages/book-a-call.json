@@ -1,0 +1,93 @@
+{
+  "title": "Book a Discovery Call | Vertical Wealth",
+  "description": "Book a free 15-minute discovery call with Brian Wheeler. No pressure and no statements needed, just a big-picture talk about your goals and questions.",
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "Discovery call",
+      "headline": "Book a discovery call",
+      "body": "Fifteen minutes with Brian, with no pressure and no statements needed. It's a big-picture conversation about your story, your goals and your biggest questions, and a chance to see if we're the right fit.",
+      "image": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/ada9b915-580d-4653-9f07-1aee98ce82d6/14+%281%29.jpg",
+      "imageAlt": "Brian Wheeler, founder of Vertical Wealth",
+      "buttons": [
+        {
+          "label": "Choose a time",
+          "href": "#calendar",
+          "style": "primary"
+        }
+      ]
+    },
+    {
+      "_template": "embed",
+      "heading": "Choose a time",
+      "body": "Set your time zone in the calendar, then pick a day and time that works for you.",
+      "kind": "booking",
+      "widgetId": "NsXNu2MBiYH1djUI99b8",
+      "height": 780,
+      "tone": "black",
+      "anchor": "calendar"
+    },
+    {
+      "_template": "steps",
+      "heading": "What happens next",
+      "tone": "purple",
+      "items": [
+        "Discovery call: About 15 minutes with Brian. Share your story, your goals and your biggest questions.",
+        "Deep dive: If it's a fit, we schedule a 1 to 2 hour meeting to gather the details, learn about your values, hopes and dreams, and analyze your full picture.",
+        "Your plan: We present a clear, customized plan and help you put it into action."
+      ],
+      "buttons": [
+        {
+          "label": "See how it works",
+          "href": "/how-it-works",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "richText",
+      "heading": "Prefer to call or email?",
+      "body": "If the calendar doesn't load or no time works for you, reach us directly.\n\n**Phone:** [(317) 794-2148](tel:+13177942148)\n\n**Email:** [info@verticalwealth.life](mailto:info@verticalwealth.life)\n\nOur office is at the Atrium, 10330 N Meridian St, Ste 300, Indianapolis, IN 46290."
+    },
+    {
+      "_template": "faq",
+      "heading": "Before you book",
+      "tone": "black",
+      "items": [
+        {
+          "question": "Is the discovery call free?",
+          "answer": "Yes. The discovery call is complimentary and comes with no obligation."
+        },
+        {
+          "question": "What should I bring?",
+          "answer": "Just your questions. There's no need to bring statements. It's a big-picture conversation about your story and your goals."
+        },
+        {
+          "question": "Who will I talk to?",
+          "answer": "Brian Wheeler, our founder and Chief Vision Officer. Brian has been in the financial business since 2000. [Meet the team](/team)."
+        },
+        {
+          "question": "What happens after the call?",
+          "answer": "If it looks like a good fit, we schedule the deep dive, a 1 to 2 hour meeting where we gather your financial information and talk about your values, hopes and dreams. If it isn't a fit, there's no pressure. [See how it works](/how-it-works)."
+        },
+        {
+          "question": "How do your fees work?",
+          "answer": "We're fiduciary and fee-based. Advisory fees are a percentage of the assets we manage. The full fee schedule is in our Form ADV, available on request. The discovery call itself is free."
+        }
+      ]
+    },
+    {
+      "_template": "ctaBanner",
+      "heading": "Not ready to talk yet?",
+      "tone": "purple",
+      "body": "Get Weekly Lessons, one short email each week with scripture, a thought from Brian and one idea you can use. It's free, and you can unsubscribe any time.",
+      "buttons": [
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "primary"
+        }
+      ]
+    }
+  ]
+}

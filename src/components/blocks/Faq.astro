@@ -1,0 +1,32 @@
+---
+import Buttons from "../Buttons.astro";
+import { richText } from "../../lib/richtext";
+import { tf } from "../../lib/tina";
+import { toneClass } from "../../lib/tone";
+const { heading, body, items = [], buttons, anchor, tone, faqField } = Astro.props;
+---
+<section class:list={["section faq", toneClass(tone)]} id={anchor || undefined} data-tina-field={tf(Astro.props) || faqField}>
+  <div class="wrap">
+    {heading && <h2 data-tina-field={tf(Astro.props, "heading")}>{heading}</h2>}
+    {body && <p class="lede" data-tina-field={tf(Astro.props, "body")}>{body}</p>}
+    <div class="list">
+      {items?.map((it: any) => (
+        <details data-tina-field={tf(it)}>
+          <summary><span data-tina-field={tf(it, "question")}>{it.question}</span></summary>
+          <div class="answer prose" data-tina-field={tf(it, "answer")} set:html={richText(it.answer)} />
+        </details>
+      ))}
+    </div>
+    <Buttons buttons={buttons} />
+  </div>
+</section>
+<style>
+  .list { margin-top: 32px; border-top: 2px solid currentColor; max-width: 900px; }
+  details { border-bottom: 2px solid currentColor; }
+  summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 22px 0; font-weight: 700; font-size: 1.15rem; line-height: 1.35; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; flex: none; width: 36px; height: 36px; display: grid; place-items: center; background: var(--accent); color: var(--accent-ink); font: 600 1.8rem/1 var(--display); transition: transform 0.15s; }
+  details[open] summary::after { transform: rotate(45deg); }
+  summary:hover span { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 4px; }
+  .answer { padding: 0 0 24px; max-width: 70ch; }
+</style>

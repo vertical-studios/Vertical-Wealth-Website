@@ -1,0 +1,47 @@
+---
+import Buttons from "../Buttons.astro";
+import { richText } from "../../lib/richtext";
+import { sized } from "../../lib/img";
+import { tf } from "../../lib/tina";
+import { toneClass } from "../../lib/tone";
+const { heading, body, items = [], tone, style = "boxed", buttons, anchor } = Astro.props;
+const ext = (h = "") => /^https?:/.test(h);
+---
+<section class:list={["section cards", toneClass(tone), `s-${style}`]} id={anchor || undefined} data-tina-field={tf(Astro.props)}>
+  <div class="wrap">
+    {heading && <h2 data-tina-field={tf(Astro.props, "heading")}>{heading}</h2>}
+    {body && <p class="lede" data-tina-field={tf(Astro.props, "body")}>{body}</p>}
+    <ul class:list={["grid", `n${Math.min(items?.length || 0, 6)}`]}>
+      {items?.map((c: any) => (
+        <li class:list={["card", { box: style === "boxed" }]} data-tina-field={tf(c)}>
+          {c.image && <img class:list={["cimg", { logo: c.imageIsLogo }]} src={sized(c.image, 800)} alt={c.imageAlt || ""} loading="lazy" data-tina-field={tf(c, "image")} />}
+          {c.eyebrow && <p class="kicker" data-tina-field={tf(c, "eyebrow")}>{c.eyebrow}</p>}
+          <h3 data-tina-field={tf(c, "title")}>{c.title}</h3>
+          {c.body && <div class="text prose" data-tina-field={tf(c, "body")} set:html={richText(c.body)} />}
+          {c.linkHref && <a class="more" href={c.linkHref} data-tina-field={tf(c, "linkLabel")} {...(ext(c.linkHref) ? { target: "_blank", rel: "noopener" } : {})}>{c.linkLabel || "Learn more"}</a>}
+        </li>
+      ))}
+    </ul>
+    <Buttons buttons={buttons} />
+  </div>
+</section>
+<style>
+  .grid { list-style: none; margin: 40px 0 0; padding: 0; display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); }
+  .n2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+  .n5 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 24px; }
+  .n6 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+  .card { position: relative; display: flex; flex-direction: column; min-width: 0; }
+  .s-boxed .card { padding: 28px 26px; }
+  .s-plain .card { padding-top: 20px; border-top: 4px solid var(--accent); }
+  .cimg { width: calc(100% + 52px); max-width: none; margin: -28px -26px 22px; aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 25%; filter: grayscale(1) contrast(1.06); }
+  .s-plain .cimg { width: 100%; margin: 0 0 18px; }
+  .cimg.logo { width: auto; max-width: 100%; height: 48px; aspect-ratio: auto; object-fit: contain; margin: 0 0 20px; filter: none; }
+  .kicker { font: 600 1.15rem/1 var(--display); letter-spacing: var(--track); margin: 0 0 8px; }
+  h3 { margin: 0 0 10px; }
+  .text { flex: 1; }
+  .more { align-self: flex-start; margin-top: 16px; padding: 10px 0 4px; font: 600 1.35rem/1 var(--display); letter-spacing: var(--track); text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; text-decoration-color: var(--accent); }
+  .more::after { content: ""; position: absolute; inset: 0; }
+  .text :global(a) { position: relative; z-index: 1; }
+  .card:has(.more:hover), .card:has(.more:focus-visible) { outline: 3px solid var(--accent); outline-offset: 4px; }
+  .more:focus-visible { outline: none; }
+</style>

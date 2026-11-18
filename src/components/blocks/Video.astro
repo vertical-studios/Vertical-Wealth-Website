@@ -1,0 +1,42 @@
+---
+// Lightweight YouTube: a still and a play button until the visitor clicks,
+// so the page never loads YouTube's player up front.
+import { tf } from "../../lib/tina";
+import { toneClass } from "../../lib/tone";
+const { heading, body, youtubeId, videoTitle, tone } = Astro.props;
+const id = String(youtubeId || "").replace(/[^A-Za-z0-9_-]/g, "");
+---
+<section class:list={["section video", toneClass(tone)]} data-tina-field={tf(Astro.props)}>
+  <div class="wrap">
+    {heading && <h2 data-tina-field={tf(Astro.props, "heading")}>{heading}</h2>}
+    {body && <p class="lede" data-tina-field={tf(Astro.props, "body")}>{body}</p>}
+    {id && (
+      <div class="frame box" data-yt={id} data-title={videoTitle || heading || "Video"} data-tina-field={tf(Astro.props, "youtubeId")}>
+        <img src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`} alt="" loading="lazy" width="480" height="360" class="photo" />
+        <button type="button" class="play"><span class="tri" aria-hidden="true"></span><span class="sr-only">Play {videoTitle || heading || "video"}</span></button>
+        <noscript><a href={`https://www.youtube.com/watch?v=${id}`}>Watch on YouTube</a></noscript>
+      </div>
+    )}
+  </div>
+</section>
+<script>
+  document.querySelectorAll<HTMLElement>("[data-yt]").forEach((el) => {
+    el.querySelector("button")?.addEventListener("click", () => {
+      const f = document.createElement("iframe");
+      f.src = `https://www.youtube-nocookie.com/embed/${el.dataset.yt}?autoplay=1&rel=0`;
+      f.title = el.dataset.title || "Video";
+      f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture";
+      f.allowFullscreen = true;
+      el.replaceChildren(f);
+    });
+  });
+</script>
+<style>
+  .frame { position: relative; margin-top: 36px; aspect-ratio: 16 / 9; background: var(--black); overflow: hidden; max-width: 1000px; }
+  .frame img { width: 100%; height: 100%; object-fit: cover; }
+  .frame :global(iframe) { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .play { position: absolute; inset: 0; display: grid; place-items: center; background: transparent; border: 0; cursor: pointer; }
+  .play .tri { width: 92px; height: 92px; background: var(--yellow); display: grid; place-items: center;  }
+  .play .tri::after { content: ""; border-left: 26px solid var(--black); border-top: 16px solid transparent; border-bottom: 16px solid transparent; margin-left: 6px; }
+  .play:hover .tri, .play:focus-visible .tri {  }
+</style>

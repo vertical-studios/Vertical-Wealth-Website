@@ -1,0 +1,103 @@
+{
+  "title": "Free Weekly Lessons on Faith and Money | Vertical Wealth",
+  "description": "One short, free email each week with scripture, a personal insight from Brian Wheeler and one step you can take. Unsubscribe any time.",
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "Weekly Lessons",
+      "headline": "Insight for the week ahead",
+      "body": "One idea you can use each week, in a short email with scripture, a personal insight from Brian Wheeler and one step to take before the next one arrives. It's free.",
+      "image": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/ada9b915-580d-4653-9f07-1aee98ce82d6/14+%281%29.jpg",
+      "imageAlt": "Brian Wheeler, founder of Vertical Wealth",
+      "buttons": [
+        {
+          "label": "Sign up free",
+          "href": "/weekly-lessons#signup",
+          "style": "primary"
+        }
+      ]
+    },
+    {
+      "_template": "cards",
+      "heading": "What's in each email",
+      "body": "Short enough to read over coffee, and practical enough to act on the same week.",
+      "tone": "black",
+      "style": "plain",
+      "items": [
+        {
+          "title": "Scripture",
+          "body": "A passage to anchor your week, with a plain look at what it means for your money, your work and your giving."
+        },
+        {
+          "title": "A personal insight from Brian",
+          "body": "A short reflection from Brian Wheeler, our founder, who has been in the financial business since 2000."
+        },
+        {
+          "title": "One action step",
+          "body": "One practical thing to try that week, so the idea moves off the page and into your life."
+        }
+      ]
+    },
+    {
+      "_template": "embed",
+      "heading": "Get Weekly Lessons",
+      "body": "Add your name and email, and the lessons will start arriving in your inbox. It's free, there's no obligation, and you can unsubscribe any time.",
+      "kind": "form",
+      "widgetId": "Tleyh88lPOLOomyni9i8",
+      "height": 495,
+      "anchor": "signup"
+    },
+    {
+      "_template": "verse",
+      "text": "Now to him who is able to do immeasurably more than all we ask or imagine, according to his power that is at work within us.",
+      "reference": "Ephesians 3:20",
+      "tone": "purple"
+    },
+    {
+      "_template": "richText",
+      "heading": "It starts with who you are",
+      "body": "Each week you'll look at what it means to live a life of purpose and Kingdom impact, one practical idea at a time. The lessons explore how to bring your finances in line with your faith, put your time, talent and treasure to work, and build a legacy that lasts.\n\nIt starts with who you are, before it gets to what you have. Week by week, the lessons are written to help you move from a mindset of scarcity to one of abundance, trusting God's provision and holding what you've been given with an open hand."
+    },
+    {
+      "_template": "faq",
+      "heading": "Questions",
+      "tone": "black",
+      "items": [
+        {
+          "question": "How often will I hear from you?",
+          "answer": "Once a week, with one short email."
+        },
+        {
+          "question": "What does it cost?",
+          "answer": "Nothing. Weekly Lessons is free, with no obligation."
+        },
+        {
+          "question": "Can I unsubscribe?",
+          "answer": "Yes, any time. Every email includes an unsubscribe link."
+        },
+        {
+          "question": "Do I need to be a client?",
+          "answer": "No. Weekly Lessons is for anyone who wants to bring their faith and their finances together. If you'd like to talk about your own plan, you can [book a discovery call](/book-a-call)."
+        }
+      ]
+    },
+    {
+      "_template": "ctaBanner",
+      "heading": "Want something to read today?",
+      "body": "Our free guide, Beyond the balance sheet: 12 questions to ask your financial advisor, is ready to download now. No sign-up needed.",
+      "tone": "purple",
+      "buttons": [
+        {
+          "label": "See free guides",
+          "href": "/guides",
+          "style": "primary"
+        },
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "secondary"
+        }
+      ]
+    }
+  ]
+}

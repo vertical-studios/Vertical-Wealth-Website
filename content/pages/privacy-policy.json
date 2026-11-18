@@ -1,0 +1,60 @@
+{
+  "title": "Privacy Policy | Vertical Wealth",
+  "description": "How Vertical Wealth collects, uses, shares and protects your personal information when you visit our website or use our financial advisory services.",
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "Legal",
+      "headline": "Privacy Policy for Vertical Wealth"
+    },
+    {
+      "_template": "richText",
+      "body": "**Last Updated: September 18, 2026**\n\nVertical Wealth (\"we,\" \"us,\" or \"our\") operates the website www.verticalwealth.life (the \"Website\"), formerly known as legacywealth.life. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our Website or engage with our financial advisory services. Please read this policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the Website."
+    },
+    {
+      "_template": "richText",
+      "heading": "1. Information We Collect",
+      "body": "We may collect information about you in the following ways:\n\n### a. Information You Provide\n\n- **Contact Information**: When you fill out our contact form, request financial advice, sign up for our newsletter, or register for events, we may collect your name, email address, phone number, mailing address, and any other information you voluntarily provide.\n- **Financial Information**: If you engage with our financial advisory services, we may collect information such as income details, investment preferences, or financial goals, as necessary to provide tailored advice.\n- **Account Information**: If you create an account on our Website (e.g., for accessing personalized content or client portals), we may collect your username, password, and related account details.\n\n### b. Automatically Collected Information\n\n- **Usage Data**: We collect information about your interactions with the Website, such as pages visited, time spent on the site, and referring URLs, using cookies, web beacons, or similar technologies.\n- **Device Information**: We may collect your IP address, browser type, operating system, and device type to optimize your experience and for analytics purposes.\n- **Cookies and Tracking Technologies**: We use cookies to enhance your experience, track usage, and deliver personalized content. You can manage cookie preferences through your browser settings.\n\n### c. Information from Third Parties\n\n- We may receive information from third-party services (e.g., Google Analytics or financial tools) about your interactions with our Website, advertisements, or services, such as demographic data or behavioral insights."
+    },
+    {
+      "_template": "richText",
+      "heading": "2. How We Use Your Information",
+      "body": "We use the information we collect for the following purposes:\n\n- **To Provide Services**: To respond to inquiries, provide financial advice, deliver personalized content, and manage client relationships.\n- **To Improve Our Website**: To analyze usage patterns and enhance the functionality and user experience of the Website.\n- **To Communicate**: To send you updates, newsletters, financial tips, or promotional materials (you may opt out at any time).\n- **To Ensure Security**: To detect and prevent fraud, unauthorized access, or other illegal activities.\n- **To Comply with Legal Obligations**: To meet legal, regulatory, or contractual requirements, including compliance with financial regulations."
+    },
+    {
+      "_template": "richText",
+      "heading": "3. How We Share Your Information",
+      "body": "We do not sell, trade, or rent your personal information to third parties. We may share your information in the following circumstances:\n\n- **Service Providers**: With trusted third-party vendors (e.g., hosting providers, payment processors, or analytics platforms) who assist us in operating the Website or delivering services, provided they agree to keep your information confidential.\n- **Legal Requirements**: If required by law, such as to comply with a subpoena, court order, or financial regulatory requirements.\n- **Business Transfers**: In the event of a merger, acquisition, or sale of all or part of our business, your information may be transferred as part of the transaction.\n- **Professional Advisors**: With financial advisors, accountants, or legal counsel, as necessary to provide our services, under strict confidentiality agreements."
+    },
+    {
+      "_template": "richText",
+      "heading": "4. Data Security",
+      "body": "We implement reasonable administrative, technical, and physical safeguards to protect your personal information from unauthorized access, use, or disclosure. Given the sensitive nature of financial data, we use industry-standard encryption and secure protocols. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security."
+    },
+    {
+      "_template": "richText",
+      "heading": "5. Your Choices and Rights",
+      "body": "You have the following rights regarding your personal information:\n\n- **Access and Update**: You may request access to, correction, or deletion of your personal information by contacting us.\n- **Opt-Out**: You may opt out of receiving marketing communications by clicking the \"unsubscribe\" link in our emails or contacting us directly.\n- **Cookies**: You can disable cookies through your browser settings, though this may affect the functionality of the Website.\n- **Do Not Track**: Our Website does not currently respond to \"Do Not Track\" signals from browsers."
+    },
+    {
+      "_template": "richText",
+      "heading": "6. Third-Party Links",
+      "body": "Our Website may contain links to third-party websites, such as financial tools or partner services. We are not responsible for the privacy practices or content of these websites. We encourage you to review the privacy policies of any third-party sites you visit."
+    },
+    {
+      "_template": "richText",
+      "heading": "7. Children's Privacy",
+      "body": "Our Website is not intended for individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we learn that we have collected such information, we will take steps to delete it."
+    },
+    {
+      "_template": "richText",
+      "heading": "8. Changes to This Privacy Policy",
+      "body": "We may update this Privacy Policy to reflect changes in our practices, legal requirements, or the rebranding from legacywealth.life to verticalwealth.life. We will notify you of significant changes by posting the updated policy on our Website with a revised \"Last Updated\" date."
+    },
+    {
+      "_template": "richText",
+      "heading": "9. Contact Us",
+      "body": "If you have questions or concerns about this Privacy Policy or our data practices, please contact us at:\n\n**Vertical Wealth**\n\nEmail: [info@verticalwealth.life](mailto:info@verticalwealth.life)\n\nAddress: 10330 N Meridian St Suite 300, Indianapolis, IN 46290\n\nPhone: [(317) 794-2148](tel:+13177942148)"
+    }
+  ]
+}

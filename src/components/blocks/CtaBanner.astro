@@ -1,0 +1,17 @@
+---
+import Buttons from "../Buttons.astro";
+import { tf } from "../../lib/tina";
+import { toneClass } from "../../lib/tone";
+const { heading, body, tone = "purple", buttons } = Astro.props;
+---
+<section class:list={["cta", toneClass(tone)]} data-tina-field={tf(Astro.props)}>
+  <div class="wrap inner">
+    {heading && <h2 data-tina-field={tf(Astro.props, "heading")}>{heading}</h2>}
+    {body && <p class="lede" data-tina-field={tf(Astro.props, "body")}>{body}</p>}
+    <Buttons buttons={buttons} />
+  </div>
+</section>
+<style>
+  .cta { padding-block: clamp(56px, 8vw, 104px); }
+  h2 { font-size: clamp(2.4rem, 1.7rem + 2.4vw, 3.4rem); max-width: 18ch; }
+</style>

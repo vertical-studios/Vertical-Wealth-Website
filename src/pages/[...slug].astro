@@ -1,0 +1,98 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Base from "../layouts/Base.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import PageBody from "../components/islands/PageBody.astro";
+import { getPage, toBlocks } from "../lib/tina";
+import { islands } from "../lib/islands";
+import { plainText } from "../lib/richtext";
+import { sized } from "../lib/img";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+  return pages.map((p) => ({
+    params: { slug: p.id === "home" ? undefined : p.id },
+    props: { page: p.data },
+  }));
+}
+
+const { page } = Astro.props as { page: any };
+const settings = (await getEntry("settings", "site"))!.data as any;
+const isHome = !Astro.params.slug;
+const slug = (Astro.params.slug as string | undefined) || "home";
+// Sections come through Tina so each element carries its click-to-edit tag.
+// The file data is the fallback if Tina returns nothing.
+const fromTina = toBlocks((await getPage(slug)).data?.page);
+const sections = fromTina.length ? fromTina : page.blocks || [];
+const SITE = "https://www.verticalwealth.life";
+const blocks: any[] = page.blocks || [];
+const faqItems = blocks.filter((b) => b._template === "faq").flatMap((b) => b.items || []);
+const heroImage = blocks.find((b) => b._template === "hero" && b.image)?.image;
+
+const address = {
+  "@type": "PostalAddress",
+  streetAddress: "10330 N Meridian St, Ste 300",
+  addressLocality: "Indianapolis",
+  addressRegion: "IN",
+  postalCode: "46290",
+  addressCountry: "US",
+};
+const sameAs = (settings.social || []).map((s: any) => s.href);
+const orgSchema = isHome
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "@id": `${SITE}/#organization`,
+      name: "Vertical Wealth",
+      url: `${SITE}/`,
+      description: page.description,
+      logo: settings.logo,
+      telephone: settings.phone,
+      email: settings.email,
+      address,
+      sameAs,
+      image: settings.ogImage,
+      parentOrganization: { "@type": "Organization", name: "Vertical Life", url: "https://thevertical.life" },
+    }
+  : undefined;
+const websiteSchema = isHome
+  ? { "@context": "https://schema.org", "@type": "WebSite", "@id": `${SITE}/#website`, name: "Vertical Wealth", url: `${SITE}/`, publisher: { "@id": `${SITE}/#organization` } }
+  : undefined;
+
+const schema: Record<string, unknown>[] = [];
+if (orgSchema) schema.push(orgSchema);
+if (websiteSchema) schema.push(websiteSchema);
+if (!isHome) {
+  schema.push({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+      { "@type": "ListItem", position: 2, name: page.title.split("|")[0].trim(), item: `${SITE}/${Astro.params.slug}` },
+    ],
+  });
+}
+if (faqItems.length) {
+  schema.push({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((f: any) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: plainText(f.answer) },
+    })),
+  });
+}
+---
+<Base
+  title={page.title}
+  description={page.description}
+  noindex={page.noindex}
+  settings={settings}
+  schema={schema}
+  image={heroImage ? sized(heroImage, 1500) : undefined}
+>
+  <TinaIsland name="page" wrapper={islands.page.wrapper} params={{ slug }} primary>
+    <PageBody blocks={sections} />
+  </TinaIsland>
+</Base>

@@ -1,0 +1,88 @@
+---
+const { settings } = Astro.props;
+const year = new Date().getFullYear();
+// Group footer links into columns by their optional "section".
+const cols: { name: string; links: any[] }[] = [];
+(settings.footerLinks || []).forEach((l: any) => {
+  const name = l.section || "";
+  const last = cols[cols.length - 1];
+  if (last && last.name === name) last.links.push(l);
+  else cols.push({ name, links: [l] });
+});
+const tel = (settings.phone || "").replace(/[^0-9+]/g, "");
+---
+<footer class="site-footer">
+  <div class="wrap top">
+    <div class="id">
+      {settings.logoStacked && <img class="mark" src={settings.logoStacked} alt="Vertical Wealth" width="220" height="51" loading="lazy" />}
+      <p class="tagline">{settings.tagline || "Live boldly. Give generously. Leave a legacy."}</p>
+      {settings.verse && <p class="verse">{settings.verse}</p>}
+    </div>
+    <div class="visit">
+      <p class="fh">Talk with us</p>
+      <address>{settings.address}</address>
+      {settings.phone && <p><a href={`tel:${tel}`}>{settings.phone}</a></p>}
+      {settings.email && <p><a href={`mailto:${settings.email}`}>{settings.email}</a></p>}
+      <a class="btn btn-primary" href={settings.navCta?.href || "/book-a-call"}>{settings.navCta?.label || "Book a call"}</a>
+    </div>
+    <nav class="cols" aria-label="Footer">
+      {cols.map((c) => (
+        <div>
+          {c.name && <p class="fh">{c.name}</p>}
+          <ul>{c.links.map((l: any) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+        </div>
+      ))}
+    </nav>
+  </div>
+  {settings.family?.length > 0 && (
+    <div class="wrap family">
+      <p class="fh">Part of Vertical Life</p>
+      <ul>
+        {settings.family.map((f: any) => (
+          <li><a href={f.href} target="_blank" rel="noopener" aria-label={f.label}>{f.logo ? <img src={f.logo} alt={f.label} loading="lazy" width="180" height="46" /> : f.label}</a></li>
+        ))}
+      </ul>
+    </div>
+  )}
+  <div class="wrap base">
+    <span>&copy; {year} Vertical Wealth</span>
+    <ul class="social">{(settings.social || []).map((s: any) => <li><a href={s.href} target="_blank" rel="noopener">{s.label}</a></li>)}</ul>
+    <ul class="legal">{(settings.legal || []).map((l: any) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+  </div>
+  {settings.disclosures?.length > 0 && (
+    <div class="wrap disc">
+      {settings.disclosures.map((d: string) => <p class="fine">{d}</p>)}
+    </div>
+  )}
+</footer>
+
+<style>
+  .site-footer { background: var(--black); color: var(--white); --fg: var(--white); --bg: var(--black); --accent: var(--yellow); --line: var(--white); border-top: 4px solid var(--purple); padding-top: clamp(56px, 7vw, 88px); }
+  .top { display: grid; grid-template-columns: minmax(200px, 1fr) minmax(220px, 1fr) 2fr; gap: 48px; }
+  .mark { width: 220px; height: auto; margin-bottom: 18px; }
+  .tagline { font: 600 2.2rem/0.95 var(--display); letter-spacing: var(--track); color: var(--yellow); margin: 0 0 6px; max-width: 13ch; }
+  .verse { font-size: 0.95rem; font-weight: 500; }
+  .fh { font: 600 1.35rem/1 var(--display); letter-spacing: var(--track); color: var(--yellow); margin: 0 0 14px; }
+  address { font-style: normal; margin-bottom: 10px; }
+  .visit p { margin: 0 0 8px; }
+  .visit a:not(.btn) { text-decoration-color: var(--yellow); text-underline-offset: 3px; }
+  .visit .btn { margin-top: 14px; }
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 28px; }
+  .cols ul, .family ul, .base ul { list-style: none; margin: 0; padding: 0; }
+  .cols li { margin-bottom: 8px; }
+  .cols a { text-decoration: none; font-weight: 500; }
+  .cols a:hover { color: var(--yellow); text-decoration: underline; text-underline-offset: 4px; }
+  .family { margin-top: 56px; padding-block: 28px; border-top: 2px solid var(--white); }
+  .family ul { display: flex; flex-wrap: wrap; gap: 20px 44px; align-items: center; }
+  .family img { width: auto; height: 40px; }
+  .family a { display: inline-flex; min-height: 44px; align-items: center; }
+  .base { display: flex; flex-wrap: wrap; gap: 14px 32px; align-items: center; padding-block: 22px 32px; border-top: 2px solid var(--white); font-size: 0.92rem; }
+  .base ul { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+  .social { margin-left: auto !important; }
+  .base a { text-decoration: none; display: inline-flex; min-height: 44px; align-items: center; }
+  .base a:hover { color: var(--yellow); }
+  @media (max-width: 900px) { .top { grid-template-columns: 1fr 1fr; } .cols { grid-column: 1 / -1; } }
+  @media (max-width: 560px) { .top { grid-template-columns: 1fr; } .social { margin-left: 0 !important; } }
+  .disc { padding-block: 0 40px; display: grid; gap: 10px; }
+  .disc .fine { margin: 0; max-width: 110ch; }
+</style>

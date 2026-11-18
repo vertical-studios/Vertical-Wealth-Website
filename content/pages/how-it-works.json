@@ -1,0 +1,100 @@
+{
+  "title": "Our Financial Planning Process | Vertical Wealth",
+  "description": "From a free discovery call to a deep dive, a clear plan and ongoing guidance. See how the Vertical Wealth financial planning process works, step by step.",
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "How it works",
+      "headline": "Your path to clarity and confidence",
+      "body": "Choosing a financial advisor is a big decision. Our process is transparent, educational and relational, designed to build trust every step of the way.",
+      "buttons": [
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "primary"
+        },
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "steps",
+      "heading": "How we work together",
+      "tone": "purple",
+      "body": "Four steps, from a first conversation to a lifelong partnership.",
+      "items": [
+        "Discovery call: 10 to 15 minutes. A quick, complimentary, no-pressure conversation about your story, your goals and your biggest questions. Together we'll see if we're the right fit. There's no need to bring statements; this is a big-picture conversation.",
+        "Deep dive and analysis: 1 to 2 hours. This is where we get into specifics. We'll talk about how hands-on or hands-off you'd like to be and gather your financial information. More importantly, we'll ask deeper questions about your values, hopes and dreams. Then our team analyzes your complete financial picture.",
+        "Strategy and implementation: We present a clear, customized plan with action steps to align your finances with your faith and goals. Once you're confident in the direction, we help you put the plan into action, coordinating with your other professionals as needed.",
+        "Ongoing guidance and adventure: This is a lifelong partnership. We can meet regularly or keep it to a few check-ins a year, whatever fits your needs. We review your progress, adjust as life happens and keep challenging you to live into the \"immeasurably more\" God has for you. We can even help arrange \"vision trips\" to see where your stewarded money is making an impact."
+      ]
+    },
+    {
+      "_template": "cards",
+      "heading": "What you can expect",
+      "style": "plain",
+      "items": [
+        {
+          "title": "Transparent",
+          "body": "We explain how we're paid and why we recommend what we do. Our service is fiduciary and fee-based."
+        },
+        {
+          "title": "Educational",
+          "body": "We help you understand your finances and see them through a biblical lens, so you can make decisions with confidence."
+        },
+        {
+          "title": "Relational",
+          "body": "We get to know your story and your values first. Then we walk alongside you as life changes."
+        }
+      ]
+    },
+    {
+      "_template": "faq",
+      "heading": "Common questions",
+      "tone": "black",
+      "items": [
+        {
+          "question": "What should I bring to the discovery call?",
+          "answer": "Nothing but your questions. The discovery call is a short, big-picture conversation about your story and your goals, so there's no need to bring statements. If we decide together to move forward, we'll gather your financial information at the deep dive."
+        },
+        {
+          "question": "Can I be hands-on or hands-off?",
+          "answer": "Either works. Some clients like to be involved in every decision, and others want it handled. We talk about your preference in the deep dive and shape our work around it. We can meet regularly or keep it to a few check-ins a year."
+        },
+        {
+          "question": "How do your fees work?",
+          "answer": "We're fiduciary and fee-based. Advisory fees are a percentage of the assets we manage. The full fee schedule is in our Form ADV, available on request. The discovery call is free."
+        },
+        {
+          "question": "Who is Vertical Wealth a good fit for?",
+          "answer": "We do our best work with households that have retirement savings and investments ready to put to work, often including an old 401(k) or two. We serve busy professionals, established stewards, couples nearing retirement, business owners and people navigating the loss of a spouse. [See who we serve](/who-we-serve)."
+        },
+        {
+          "question": "Will you work with my CPA or attorney?",
+          "answer": "Yes. As we put your plan into action, we coordinate with your other professionals as needed."
+        }
+      ]
+    },
+    {
+      "_template": "ctaBanner",
+      "heading": "Start with step one",
+      "tone": "purple",
+      "body": "Book a 15-minute, no-pressure discovery call with Brian. Not ready to talk yet? Get Weekly Lessons, one short email each week with one idea you can use.",
+      "buttons": [
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "primary"
+        },
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "secondary"
+        }
+      ]
+    }
+  ]
+}

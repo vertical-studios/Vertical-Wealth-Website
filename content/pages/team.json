@@ -1,0 +1,102 @@
+{
+  "title": "Meet Our Team | Vertical Wealth",
+  "description": "Meet the Vertical Wealth team in Indianapolis, including founder Brian Wheeler and wealth advisor Chris Herrmann, your partners in biblical stewardship.",
+  "blocks": [
+    {
+      "_template": "hero",
+      "eyebrow": "Our team",
+      "headline": "Your partners in stewardship",
+      "body": "Your financial advisor should be more than a number-cruncher. They should be a wise counselor who shares your values. Our team is committed to technical excellence and biblical wisdom, walking alongside you with genuine care.",
+      "buttons": [
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "primary"
+        },
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "cards",
+      "heading": "Your advisors",
+      "tone": "black",
+      "style": "boxed",
+      "items": [
+        {
+          "image": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/ada9b915-580d-4653-9f07-1aee98ce82d6/14+%281%29.jpg",
+          "imageAlt": "Brian Wheeler, Chief Vision Officer and Financial Planner",
+          "eyebrow": "Chief Vision Officer and Financial Planner",
+          "title": "Brian Wheeler",
+          "body": "Brian paints the vision for what God will do in and through our clients. He is the lead practice manager for corporate clients and tends to a group of financial planning clients.\n\nAs the founder, Brian has been in the financial business since 2000. He started Vertical Wealth in his formal dining room after leaving a larger firm to pursue his dream of creating a fee-based, holistic planning group."
+        },
+        {
+          "image": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/3fb2a60f-6a97-48e5-9e34-bed5e3e98b25/02+%281%29.jpg",
+          "imageAlt": "Chris Herrmann, Wealth Advisor",
+          "eyebrow": "Wealth Advisor",
+          "title": "Chris Herrmann",
+          "body": "Chris is an experienced advisor with more than 25 years in financial planning, sales management, banking, training, investment management and merchant services. He enjoys his daily interaction with clients and colleagues. What spare time he has is dedicated to family and community."
+        }
+      ]
+    },
+    {
+      "_template": "cards",
+      "heading": "Leadership and support",
+      "style": "boxed",
+      "items": [
+        {
+          "image": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/bdac945c-002f-4122-8941-28b854b7599c/11+%281%29.jpg",
+          "imageAlt": "Susan Rozzi, CEO",
+          "eyebrow": "CEO",
+          "title": "Susan Rozzi"
+        },
+        {
+          "image": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/9e5a2802-1f4e-4333-9813-e804bcbb7e72/03+%281%29.jpg",
+          "imageAlt": "Kaitlyn Smith, COO",
+          "eyebrow": "COO",
+          "title": "Kaitlyn Smith"
+        },
+        {
+          "image": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/fc054e40-841b-468a-b1f6-51739f55b460/06+%281%29.jpg",
+          "imageAlt": "Carinne Terry, Executive Assistant",
+          "eyebrow": "Executive Assistant",
+          "title": "Carinne Terry"
+        }
+      ]
+    },
+    {
+      "_template": "richText",
+      "heading": "Grounded in timeless truth",
+      "tone": "black",
+      "body": "In a world of shifting values, we ground our advice in timeless truth. Our whole process rests on core biblical principles that shape how we see wealth, purpose and stewardship.",
+      "buttons": [
+        {
+          "label": "Our approach",
+          "href": "/our-approach",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "_template": "ctaBanner",
+      "heading": "Let's start a conversation",
+      "tone": "purple",
+      "body": "Book a 15-minute, no-pressure discovery call with Brian. Bring your questions; there's no need to bring statements. Not ready yet? Get Weekly Lessons, one short email each week with one idea you can use.",
+      "buttons": [
+        {
+          "label": "Book a discovery call",
+          "href": "/book-a-call",
+          "style": "primary"
+        },
+        {
+          "label": "Get Weekly Lessons",
+          "href": "/weekly-lessons",
+          "style": "secondary"
+        }
+      ]
+    }
+  ]
+}

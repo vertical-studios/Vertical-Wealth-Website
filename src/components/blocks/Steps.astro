@@ -1,0 +1,25 @@
+---
+import Buttons from "../Buttons.astro";
+import { tf } from "../../lib/tina";
+import { toneClass } from "../../lib/tone";
+const { heading, body, items = [], buttons, tone } = Astro.props;
+---
+<section class:list={["section steps", toneClass(tone)]} data-tina-field={tf(Astro.props)}>
+  <div class="wrap">
+    {heading && <h2 data-tina-field={tf(Astro.props, "heading")}>{heading}</h2>}
+    {body && <p class="lede" data-tina-field={tf(Astro.props, "body")}>{body}</p>}
+    <ol>
+      {items?.map((t: string, i: number) => (
+        <li><span class="n">{String(i + 1).padStart(2, "0")}</span><p data-tina-field={tf(Astro.props, "stepItems", i)}>{(() => { const m = /^([^:.]{2,48}):\s+(.*)$/s.exec(t || ""); return m ? <><strong class="st">{m[1]}</strong>{m[2].charAt(0).toUpperCase() + m[2].slice(1)}</> : t; })()}</p></li>
+      ))}
+    </ol>
+    <Buttons buttons={buttons} />
+  </div>
+</section>
+<style>
+  ol { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 28px; }
+  li { padding-top: 16px; border-top: 4px solid var(--accent); }
+  .n { display: block; font: 600 3.4rem/1 var(--display); letter-spacing: var(--track); color: var(--accent); margin-bottom: 8px; }
+  li p { font-weight: 500; }
+  .st { display: block; font: 600 1.6rem/1 var(--display); letter-spacing: var(--track); margin-bottom: 6px; }
+</style>

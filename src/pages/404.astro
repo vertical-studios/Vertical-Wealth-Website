@@ -1,0 +1,51 @@
+---
+// Branded "page not found" page. Prerendered to 404.html; Vercel and the
+// Node server both serve it for any URL that doesn't match a page.
+import { getEntry } from "astro:content";
+import Base from "../layouts/Base.astro";
+
+const settings = (await getEntry("settings", "site"))!.data as any;
+
+const links = [
+  { label: "Our approach", href: "/our-approach" },
+  { label: "What we do", href: "/services" },
+  { label: "Who we serve", href: "/who-we-serve" },
+  { label: "Weekly Lessons", href: "/weekly-lessons" },
+  { label: "Team", href: "/team" },
+  { label: "Contact", href: "/contact" },
+];
+---
+<Base
+  title="Page not found | Vertical Wealth"
+  description="We couldn't find that page. Head home, book a call or pick a page below."
+  noindex
+  settings={settings}
+>
+  <section class="nf on-white">
+    <div class="wrap">
+      <h1>We can't find that page</h1>
+      <p class="lede">It may have moved when we rebuilt the site, or the link has a typo. Here's where most people are headed.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="/">Go to the homepage</a>
+        <a class="btn btn-secondary" href="/book-a-call">Book a call</a>
+      </div>
+      <ul class="links">
+        {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf { padding-block: clamp(64px, 9vw, 120px) clamp(104px, 13vw, 168px); }
+  .links {
+    list-style: none; padding: 0; margin: clamp(40px, 6vw, 64px) 0 0;
+    display: flex; flex-wrap: wrap; gap: 12px 32px;
+  }
+  .links a {
+    font: 600 1.6rem/1 var(--display); letter-spacing: var(--track);
+    text-decoration: underline; text-decoration-color: var(--purple);
+    text-decoration-thickness: 2px; text-underline-offset: 5px;
+  }
+  .links a:hover { color: var(--purple); }
+</style>
