@@ -24,15 +24,14 @@ const Tag = first ? "h1" : "h2";
   </div>
 </section>
 <style>
-  .hero { padding-block: clamp(48px, 7vw, 96px) clamp(56px, 8vw, 104px); }
+  .hero { padding-block: clamp(56px, 8vw, 104px); }
   .inner { display: grid; gap: clamp(32px, 5vw, 64px); align-items: center; }
   .has-img .inner { grid-template-columns: 1.05fr 1fr; }
   h1, h2 { max-width: 16ch; }
   .ln { display: block; }
-  h2 { font-size: clamp(2.4rem, 1.7rem + 2.4vw, 3.4rem); }
+  h2 { font-size: var(--fs-h1); }
   /* The purple edge: Wealth's one vertical accent */
   .media { margin: 0; border-left: 12px solid var(--accent); }
-  .media img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 22%; }
-  .has-img .media { max-width: 520px; justify-self: end; width: 100%; }
-  @media (max-width: 900px) { .has-img .inner { grid-template-columns: 1fr; } .has-img .media { justify-self: start; } }
+  .media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 25%; }
+  @media (max-width: 900px) { .has-img .inner { grid-template-columns: 1fr; } }
 </style>

@@ -19,7 +19,7 @@ const { heading, body, items = [], buttons, tone } = Astro.props;
 <style>
   ol { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 28px; }
   li { padding-top: 16px; border-top: 4px solid var(--accent); }
-  .n { display: block; font: 600 3.4rem/1 var(--display); letter-spacing: var(--track); color: var(--accent); margin-bottom: 8px; }
+  .n { display: block; font: 600 var(--fs-step)/1 var(--display); letter-spacing: var(--track); color: var(--accent); margin-bottom: 8px; }
   li p { font-weight: 500; }
   .st { display: block; font: 600 1.6rem/1 var(--display); letter-spacing: var(--track); margin-bottom: 6px; }
 </style>

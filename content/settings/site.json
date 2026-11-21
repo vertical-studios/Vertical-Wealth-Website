@@ -198,5 +198,9 @@
       "href": "https://www.verticalstudios.life/",
       "logo": "https://images.squarespace-cdn.com/content/v1/6628083a88405b4d0f29bf6f/3d25ed0c-15fb-421e-9725-f759edebcb04/VS+white+bold+yellow+horizontal.png?format=750w"
     }
-  ]
+  ],
+  "siteName": "Vertical Wealth",
+  "contactHeading": "Talk with us",
+  "familyHeading": "Part of Vertical Life",
+  "utilityLabel": "Client login"
 }

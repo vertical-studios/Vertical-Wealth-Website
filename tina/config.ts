@@ -1,4 +1,5 @@
 import { defineConfig, type Template } from "tinacms";
+import { settingsFields } from "./family-settings";
 
 // ---------------------------------------------------------------------------
 // BLOCK LIBRARY (Vertical Wealth)
@@ -244,37 +245,7 @@ export default defineConfig({
       {
         name: "settings", label: "Site settings (nav, footer)", path: "content/settings", format: "json",
         ui: { allowedActions: { create: false, delete: false } },
-        fields: [
-          { type: "image", name: "logo", label: "Header logo (white text version)" },
-          { type: "image", name: "logoStacked", label: "Footer logo" },
-          { type: "image", name: "favicon", label: "Favicon" },
-          { type: "image", name: "ogImage", label: "Default social share image" },
-          {
-            type: "object", name: "nav", label: "Header navigation", list: true,
-            ui: { itemProps: (i: any) => ({ label: i?.label || "Menu item" }) },
-            fields: [
-              { type: "string", name: "label", label: "Label", required: true },
-              { type: "string", name: "href", label: "Link (for a single link)" },
-              link("links", "Dropdown links", [{ type: "string" as const, name: "section", label: "Column heading (optional)" }]),
-            ],
-          },
-          link("clientLogins", "Client login links (top bar)"),
-          { type: "object", name: "navCta", label: "Yellow header button", fields: [
-            { type: "string", name: "label", label: "Label" },
-            { type: "string", name: "short", label: "Short label for phones" },
-            { type: "string", name: "href", label: "Link" },
-          ] },
-          { type: "string", name: "tagline", label: "Footer tagline" },
-          { type: "string", name: "disclosures", label: "Footer disclosures (one paragraph per line)", list: true, ui: { component: "textarea" } },
-          { type: "string", name: "verse", label: "Footer verse" },
-          { type: "string", name: "address", label: "Address" },
-          { type: "string", name: "phone", label: "Phone" },
-          { type: "string", name: "email", label: "Email" },
-          link("footerLinks", "Footer links", [{ type: "string" as const, name: "section", label: "Column heading" }]),
-          link("social", "Social links"),
-          link("legal", "Legal links"),
-          link("family", "Ecosystem logos", [{ type: "image" as const, name: "logo", label: "Logo (white text version)" }]),
-        ],
+        fields: settingsFields,
       },
     ],
   },

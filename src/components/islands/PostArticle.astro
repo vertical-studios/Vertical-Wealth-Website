@@ -40,7 +40,7 @@ const date = d?.date ? new Date(d.date) : null;
 <style>
   .narrow { max-width: 760px; }
   .post-head { background: var(--black); color: var(--white); --fg: var(--white); border-bottom: 4px solid var(--purple); padding-block: clamp(64px, 9vw, 112px) clamp(40px, 5vw, 64px); }
-  .post-head h1 { font-size: clamp(2.4rem, 1.7rem + 2.6vw, 3.6rem); max-width: 20ch; }
+  .post-head h1 { font-size: var(--fs-h1); max-width: 20ch; }
   .crumbs { font-size: 0.85rem; color: var(--white); margin-bottom: 18px; }
   .crumbs a { color: var(--yellow); text-decoration: none; font-weight: 700; }
   .dek { font-size: 1.2rem; color: var(--white); }

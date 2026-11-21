@@ -1,4 +1,7 @@
 ---
+// VERTICAL FAMILY SHELL: shared header, identical in every site repo.
+// Layout and sizes are fixed here; each site sets its colors with the --hdr-* tokens in global.css
+// and its names, links and button in Site settings.
 const { settings } = Astro.props;
 const here = Astro.url.pathname.replace(/\.html$/, "");
 const isCurrent = (href: string) => href !== "/" && (here === href || here.startsWith(href + "/"));
@@ -13,22 +16,22 @@ const sectionsOf = (links: any[] = []) => {
   });
   return out;
 };
-const logo = settings.logo;
+const name = settings.siteName || "Vertical";
 const logins = settings.clientLogins || [];
-const cta = { href: settings.navCta?.href || "/book-a-call", label: settings.navCta?.label || "Book a call", short: settings.navCta?.short || "Book" };
+const cta = { href: settings.navCta?.href || "/", label: settings.navCta?.label || "Get started", short: settings.navCta?.short || settings.navCta?.label || "Start" };
 ---
 <header class="site-header">
   {logins.length > 0 && (
     <div class="util">
       <div class="wrap util-in">
-        <span class="util-h">Client login</span>
+        <span class="util-h">{settings.utilityLabel || "Client login"}</span>
         {logins.map((l: any) => <a href={l.href} target="_blank" rel="noopener">{l.label}</a>)}
       </div>
     </div>
   )}
   <div class="wrap bar">
-    <a href="/" class="logo" aria-label="Vertical Wealth home">
-      <img src={logo} alt="Vertical Wealth" width="230" height="54" />
+    <a href="/" class="logo" aria-label={`${name} home`}>
+      {settings.logo ? <img src={settings.logo} alt={name} width="210" height="48" /> : <span class="logo-text">{name}</span>}
     </a>
     <a class="btn btn-primary bar-cta" href={cta.href}>
       <span class="long">{cta.label}</span><span class="short">{cta.short}</span>
@@ -38,7 +41,7 @@ const cta = { href: settings.navCta?.href || "/book-a-call", label: settings.nav
     </button>
     <nav id="site-nav" aria-label="Main">
       <ul class="menu">
-        {settings.nav.map((group: any, gi: number) =>
+        {(settings.nav || []).map((group: any, gi: number) =>
           group.links && group.links.length > 0 ? (
             <li class="group">
               <button class="group-btn" aria-expanded="false" aria-controls={`drop-${gi}`}>{group.label}</button>
@@ -69,7 +72,7 @@ const cta = { href: settings.navCta?.href || "/book-a-call", label: settings.nav
       <a class="btn btn-primary nav-cta" href={cta.href}>{cta.label}</a>
       {logins.length > 0 && (
         <div class="m-logins">
-          <p class="sec-h">Client login</p>
+          <p class="sec-h">{settings.utilityLabel || "Client login"}</p>
           {logins.map((l: any) => <a href={l.href} target="_blank" rel="noopener">{l.label}</a>)}
         </div>
       )}
@@ -117,67 +120,80 @@ const cta = { href: settings.navCta?.href || "/book-a-call", label: settings.nav
     if (toggle?.getAttribute("aria-expanded") === "true") { setMenu(false); toggle.focus(); }
   });
   // Leaving mobile width with the menu open should not leave the page locked.
-  matchMedia("(min-width: 1061px)").addEventListener("change", (m) => m.matches && setMenu(false));
+  matchMedia("(min-width: 1361px)").addEventListener("change", (m) => m.matches && setMenu(false));
 </script>
 
 <style>
-  .site-header { position: sticky; top: 0; z-index: 50; background: var(--black); color: var(--white); border-bottom: 4px solid var(--purple); }
-  .util { border-bottom: 1px solid var(--white); font-size: 0.85rem; }
+  .site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--hdr-bg, #000); color: var(--hdr-fg, #fff);
+    border-bottom: var(--rule) solid var(--hdr-rule, var(--accent));
+    --fg: var(--hdr-fg, #fff); --bg: var(--hdr-bg, #000);
+    --btn-hover-bg: var(--hdr-fg, #fff); --btn-hover-fg: var(--hdr-bg, #000);
+    --focus: var(--hdr-hover, #fcc602);
+  }
+  .util { border-bottom: 1px solid var(--hdr-fg, #fff); font-size: var(--fs-fine); }
   .util-in { display: flex; justify-content: flex-end; align-items: center; gap: 4px 18px; min-height: 34px; }
   .util-h { font-weight: 700; }
-  .util a { color: var(--white); text-underline-offset: 3px; }
-  .util a:hover { color: var(--yellow); }
-  .m-logins { display: none; }
-  .bar { display: flex; align-items: center; gap: 28px; min-height: 80px; }
-  .logo { display: inline-flex; align-items: center; min-height: 44px; flex: none; }
+  .util a { color: var(--hdr-fg, #fff); text-underline-offset: 3px; }
+  .util a:hover { color: var(--hdr-hover, #fcc602); }
+  .bar { display: flex; align-items: center; gap: 28px; min-height: var(--header-h); }
+  .logo { display: inline-flex; align-items: center; min-height: 44px; flex: none; text-decoration: none; }
   .logo img { width: 210px; height: auto; }
-  nav { display: flex; align-items: center; gap: 28px; margin-left: auto; }
-  .menu { list-style: none; display: flex; align-items: center; gap: 4px; margin: 0; padding: 0; }
+  .logo-text { font: 600 2rem/1 var(--display); letter-spacing: var(--track); }
+  nav { display: flex; align-items: center; gap: 28px; margin-left: auto; min-width: 0; }
+  /* A long menu wraps instead of pushing the page sideways (e.g. while the web font loads) */
+  .menu { list-style: none; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 0 4px; margin: 0; padding: 0; }
   .menu > li { position: relative; }
   .group-btn, .top-link {
     display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 6px 14px 2px;
-    background: none; border: 0; cursor: pointer; text-decoration: none; color: var(--white);
-    font: 600 1.5rem/1 var(--display); letter-spacing: var(--track);
+    background: none; border: 0; cursor: pointer; text-decoration: none; color: var(--hdr-fg, #fff);
+    font: 600 var(--fs-nav)/1 var(--display); letter-spacing: var(--track);
   }
   .group-btn::after { content: ""; width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translate(-2px, -2px); }
-  .group-btn:hover, .top-link:hover, .top-link[aria-current="page"] { color: var(--yellow); }
-  .group-btn[aria-expanded="true"] { color: var(--yellow); }
+  .group-btn:hover, .top-link:hover, .top-link[aria-current="page"], .group-btn[aria-expanded="true"] { color: var(--hdr-hover, #fcc602); }
   .drop {
     position: absolute; top: calc(100% + 10px); left: 0; min-width: 260px; padding: 12px 0;
-    background: var(--black); border: 2px solid var(--white); border-top: 4px solid var(--purple);
+    background: var(--hdr-bg, #000); border: 2px solid var(--hdr-fg, #fff); border-top: var(--rule) solid var(--hdr-rule, var(--accent));
     display: none;
   }
   .drop.mega { display: none; grid-template-columns: repeat(var(--cols), minmax(200px, 1fr)); padding: 16px 0; }
   .group-btn[aria-expanded="true"] + .drop { display: block; }
   .group-btn[aria-expanded="true"] + .drop.mega { display: grid; }
-  @media (hover: hover) and (min-width: 1061px) {
+  @media (hover: hover) and (min-width: 1361px) {
     .group:hover:not(.esc) > .drop { display: block; }
     .group:hover:not(.esc) > .drop.mega { display: grid; }
     .group:hover::before { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 12px; }
   }
   .drop ul { list-style: none; margin: 0; padding: 0; }
-  .sec + .sec { border-left: 2px solid var(--white); }
-  .sec-h { margin: 0 20px 8px; padding-bottom: 8px; border-bottom: 2px solid var(--yellow); color: var(--yellow); font: 600 1.25rem/1 var(--display); letter-spacing: var(--track); }
-  .drop a { display: block; padding: 9px 20px; text-decoration: none; font: 600 1.35rem/1.15 var(--display); letter-spacing: var(--track); }
-  .drop a:hover, .drop a[aria-current="page"] { color: var(--yellow); }
-  .nav-cta { white-space: nowrap; }
+  .sec + .sec { border-left: 2px solid var(--hdr-fg, #fff); }
+  .sec-h { margin: 0 20px 8px; padding-bottom: 8px; border-bottom: 2px solid var(--hdr-hover, #fcc602); color: var(--hdr-hover, #fcc602); font: 600 1.25rem/1 var(--display); letter-spacing: var(--track); }
+  .drop a { display: block; padding: 9px 20px; text-decoration: none; font: 600 1.35rem/1.15 var(--display); letter-spacing: var(--track); color: var(--hdr-fg, #fff); }
+  .drop a:hover, .drop a[aria-current="page"] { color: var(--hdr-hover, #fcc602); }
+  .nav-cta { white-space: nowrap; flex: none; }
+  @media (min-width: 1361px) and (max-width: 1500px) {
+    .bar, nav { gap: 20px; }
+    .group-btn, .top-link { padding-inline: 9px; }
+  }
   .bar-cta { display: none; }
+  .m-logins { display: none; }
   .menu-toggle { display: none; background: none; border: 0; padding: 12px; cursor: pointer; min-width: 48px; min-height: 48px; place-items: center; }
-  .burger, .burger::before, .burger::after { display: block; width: 26px; height: 2px; background: var(--white); position: relative; content: ""; }
+  .burger, .burger::before, .burger::after { display: block; width: 26px; height: 2px; background: var(--hdr-fg, #fff); position: relative; content: ""; }
   .burger::before { position: absolute; top: -8px; }
   .burger::after { position: absolute; top: 8px; }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
-  @media (max-width: 1060px) {
+  @media (max-width: 1360px) {
     .util { display: none; }
-    .bar { gap: 12px; min-height: 72px; }
+    .bar { gap: 12px; min-height: var(--header-h-m); }
     .logo { margin-right: auto; }
     .logo img { width: 170px; }
     .menu-toggle { display: grid; margin-right: -12px; }
     .bar-cta { display: inline-flex; min-height: 44px; padding: 0.4em 0.7em 0.3em; white-space: nowrap; }
     .bar-cta .short { display: none; }
     nav {
-      position: fixed; inset: 76px 0 0 0; background: var(--black); flex-direction: column; align-items: stretch; gap: 0;
+      position: fixed; inset: calc(var(--header-h-m) + var(--rule)) 0 0 0; background: var(--hdr-bg, #000);
+      flex-direction: column; align-items: stretch; gap: 0;
       padding: 16px max(var(--gutter), env(safe-area-inset-right, 0px)) 40px max(var(--gutter), env(safe-area-inset-left, 0px));
       overflow-y: auto; overscroll-behavior: contain; transform: translateX(100%); visibility: hidden;
       transition: transform 0.25s ease, visibility 0s linear 0.25s;
@@ -185,14 +201,14 @@ const cta = { href: settings.navCta?.href || "/book-a-call", label: settings.nav
     nav.open { transform: none; visibility: visible; transition: transform 0.25s ease, visibility 0s; }
     :global(html.menu-open) { overflow: hidden; }
     .menu { flex-direction: column; align-items: stretch; }
-    .group-btn, .top-link { width: 100%; justify-content: space-between; font-size: 1.9rem; padding: 14px 0; border-bottom: 2px solid var(--white); }
-    .drop, .drop.mega, .group-btn[aria-expanded="true"] + .drop.mega { position: static; box-shadow: none; border: 0; padding: 4px 0 12px 12px; grid-template-columns: 1fr; }
+    .group-btn, .top-link { width: 100%; justify-content: space-between; font-size: 1.9rem; padding: 14px 0; border-bottom: 2px solid var(--hdr-fg, #fff); }
+    .drop, .drop.mega, .group-btn[aria-expanded="true"] + .drop.mega { position: static; border: 0; padding: 4px 0 12px 12px; grid-template-columns: 1fr; }
     .sec + .sec { border-left: 0; margin-top: 10px; }
     .sec-h { margin: 8px 0 4px; }
     .drop a { padding: 12px 0; font-size: 1.5rem; }
     .nav-cta { margin-top: 24px; }
     .m-logins { display: grid; gap: 4px; margin-top: 28px; }
-    .m-logins a { padding: 10px 0; color: var(--white); font-weight: 500; }
+    .m-logins a { padding: 10px 0; color: var(--hdr-fg, #fff); font-weight: 500; }
   }
   @media (max-width: 420px) {
     .logo img { width: 132px; }

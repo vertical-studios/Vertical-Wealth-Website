@@ -1,0 +1,143 @@
+/* =====================================================================
+   VERTICAL FAMILY SHELL (shared, identical in every site repo)
+   Vertical Immersive, Vertical Life, Vertical Wealth, Vertical Studios.
+
+   Layout, type scale, spacing, buttons and helpers live here, so every
+   site reads at the same sizes. Colors, textures and names come from each
+   site's brand tokens in global.css (loaded after this file).
+   Change this file in one repo, then copy it to the other three.
+   ===================================================================== */
+:root {
+  /* Type scale */
+  --fs-body: 18px;
+  --fs-h1: clamp(3.25rem, 2rem + 4.6vw, 5rem);      /* 52px phone, 80px desktop */
+  --fs-h2: clamp(2.5rem, 1.6rem + 3vw, 3.75rem);    /* 40px phone, 60px desktop */
+  --fs-h3: clamp(1.75rem, 1.4rem + 1vw, 2.15rem);   /* 28px phone, 34px desktop */
+  --fs-h4: 1.5rem;
+  --fs-card: 1.9rem;                                 /* card and post titles */
+  --fs-lede: clamp(1.125rem, 1rem + 0.4vw, 1.3rem);
+  --fs-quote: clamp(2rem, 1.4rem + 2.4vw, 3.2rem);   /* scripture and pull quotes */
+  --fs-stat: clamp(2.8rem, 2rem + 2.4vw, 4rem);      /* big numbers */
+  --fs-step: 3.4rem;                                 /* step numbers */
+  --fs-small: 0.92rem;
+  --fs-fine: 0.85rem;
+  --fs-btn: 1.5rem;
+  --fs-tag: 1.15rem;
+  --fs-nav: 1.5rem;
+  --track: -0.02em;
+  --lh-head: 0.95;
+
+  /* Layout */
+  --wrap: 1240px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --section: clamp(64px, 8vw, 112px);
+  --header-h: 84px;
+  --header-h-m: 72px;
+  --rule: 4px;
+
+  /* Neutral defaults; each site's brand tokens override these */
+  --bg: #ffffff;
+  --fg: #000000;
+  --accent: #000000;
+  --accent-ink: #ffffff;
+  --line: #000000;
+  --tag-bg: var(--accent);
+  --tag-fg: var(--accent-ink);
+  --btn-bg: #fcc602;
+  --btn-fg: #000000;
+  --btn-hover-bg: #000000;
+  --btn-hover-fg: #fcc602;
+  --focus: var(--accent);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 120px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 var(--fs-body)/1.6 var(--body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+button, input, textarea, select { font: inherit; color: inherit; border-radius: 0; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+/* Headings: Bebas Neue Pro, one scale everywhere */
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: var(--track);
+  line-height: var(--lh-head);
+  margin: 0 0 0.4em;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); }
+p { margin: 0 0 1em; }
+p:last-child { margin-bottom: 0; }
+.lede { font-size: var(--fs-lede); line-height: 1.5; max-width: 60ch; }
+.fine { font-size: var(--fs-fine); line-height: 1.55; max-width: 80ch; }
+
+/* Layout */
+.wrap {
+  width: 100%;
+  max-width: calc(var(--wrap) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-left: max(var(--gutter), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
+}
+.section { padding-block: var(--section); }
+
+/* Small label above a hero headline */
+.tag {
+  display: inline-block; padding: 6px 14px 4px; margin-bottom: 18px;
+  background: var(--tag-bg); color: var(--tag-fg);
+  font: 600 var(--fs-tag)/1 var(--display); letter-spacing: var(--track);
+}
+
+/* Buttons: one size and shape on every site */
+.btn-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 1.75rem; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 52px; padding: 0.5em 1.1em 0.38em;
+  font: 600 var(--fs-btn)/1 var(--display); letter-spacing: var(--track);
+  text-decoration: none; text-align: center;
+  border: 2px solid var(--btn-bg); border-radius: 0; cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+}
+.btn-primary { background: var(--btn-bg); color: var(--btn-fg); }
+.btn-primary:hover { background: var(--btn-hover-bg); border-color: var(--btn-hover-bg); color: var(--btn-hover-fg); }
+.btn-secondary { background: transparent; color: var(--fg); border-color: var(--fg); }
+.btn-secondary:hover { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+
+/* Rich text */
+.prose a { color: inherit; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.prose ul, .prose ol { padding-left: 1.2em; margin: 0 0 1em; }
+.prose li { margin-bottom: 0.4em; }
+.prose li::marker { color: var(--accent); }
+.prose strong { font-weight: 700; }
+.prose h2 { margin-top: 1.4em; }
+.prose h3 { margin-top: 1.2em; }
+.prose p, .prose ul, .prose ol { max-width: 70ch; }
+.table-scroll { overflow-x: auto; margin: 1.5em 0; }
+.table-scroll table { width: 100%; border-collapse: collapse; }
+.table-scroll th, .table-scroll td { text-align: left; padding: 12px; border-bottom: 2px solid var(--line); }
+
+/* Accessibility helpers */
+.skip {
+  position: fixed; left: 16px; top: 12px; z-index: 100; transform: translateY(-200%);
+  background: var(--btn-bg); color: var(--btn-fg); padding: 12px 18px; font-weight: 700; text-decoration: none;
+}
+.skip:focus, .skip:focus-visible { transform: none; outline: 3px solid var(--fg); outline-offset: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* TinaCMS editable-region wrapper: no box of its own, so layout is unchanged */
+.tina-island { display: contents; }
+
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
