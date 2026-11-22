@@ -16,7 +16,7 @@
           "style": "primary"
         },
         {
-          "label": "Book a discovery call",
+          "label": "Book a Discovery Call",
           "href": "/book-a-call",
           "style": "secondary"
         }
@@ -53,7 +53,7 @@
       ],
       "buttons": [
         {
-          "label": "Our approach",
+          "label": "Our Approach",
           "href": "/our-approach",
           "style": "secondary"
         }
@@ -68,25 +68,25 @@
         {
           "title": "Busy professionals",
           "body": "Physicians, attorneys and executives with old 401(k)s, heavy taxes and no time to sort it out.",
-          "linkLabel": "Read more",
+          "linkLabel": "Read More",
           "linkHref": "/who-we-serve#professionals"
         },
         {
           "title": "Business owners",
           "body": "Planning a sale or a transition, and asking what the proceeds should do next.",
-          "linkLabel": "Read more",
+          "linkLabel": "Read More",
           "linkHref": "/who-we-serve#business-owners"
         },
         {
           "title": "Nearing retirement",
           "body": "A few years out and ready to move from building wealth to building a legacy.",
-          "linkLabel": "Read more",
+          "linkLabel": "Read More",
           "linkHref": "/who-we-serve#retirement"
         },
         {
           "title": "Facing a loss",
           "body": "When the person you leaned on for money decisions is gone, we keep things simple and clear.",
-          "linkLabel": "Read more",
+          "linkLabel": "Read More",
           "linkHref": "/who-we-serve#loss"
         }
       ]
@@ -104,7 +104,7 @@
       ],
       "buttons": [
         {
-          "label": "See how it works",
+          "label": "See How It Works",
           "href": "/how-it-works",
           "style": "primary"
         }
@@ -143,7 +143,7 @@
       ],
       "buttons": [
         {
-          "label": "All services",
+          "label": "All Services",
           "href": "/services",
           "style": "secondary"
         }
@@ -173,7 +173,7 @@
       ],
       "buttons": [
         {
-          "label": "Meet the team",
+          "label": "Meet the Team",
           "href": "/team",
           "style": "secondary"
         }
@@ -237,7 +237,7 @@
       "body": "Book a 15-minute, no-pressure discovery call with Brian. Bring your questions; there's no need to bring statements.",
       "buttons": [
         {
-          "label": "Book a discovery call",
+          "label": "Book a Discovery Call",
           "href": "/book-a-call",
           "style": "primary"
         },

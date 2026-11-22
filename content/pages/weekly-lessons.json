@@ -11,7 +11,7 @@
       "imageAlt": "Brian Wheeler, founder of Vertical Wealth",
       "buttons": [
         {
-          "label": "Sign up free",
+          "label": "Sign Up Free",
           "href": "/weekly-lessons#signup",
           "style": "primary"
         }
@@ -88,12 +88,12 @@
       "tone": "purple",
       "buttons": [
         {
-          "label": "See free guides",
+          "label": "See Free Guides",
           "href": "/guides",
           "style": "primary"
         },
         {
-          "label": "Book a discovery call",
+          "label": "Book a Discovery Call",
           "href": "/book-a-call",
           "style": "secondary"
         }

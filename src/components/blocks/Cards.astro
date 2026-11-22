@@ -18,7 +18,7 @@ const ext = (h = "") => /^https?:/.test(h);
           {c.eyebrow && <p class="kicker" data-tina-field={tf(c, "eyebrow")}>{c.eyebrow}</p>}
           <h3 data-tina-field={tf(c, "title")}>{c.title}</h3>
           {c.body && <div class="text prose" data-tina-field={tf(c, "body")} set:html={richText(c.body)} />}
-          {c.linkHref && <a class="more" href={c.linkHref} data-tina-field={tf(c, "linkLabel")} {...(ext(c.linkHref) ? { target: "_blank", rel: "noopener" } : {})}>{c.linkLabel || "Learn more"}</a>}
+          {c.linkHref && <a class="more" href={c.linkHref} data-tina-field={tf(c, "linkLabel")} {...(ext(c.linkHref) ? { target: "_blank", rel: "noopener" } : {})}>{c.linkLabel || "Learn More"}</a>}
         </li>
       ))}
     </ul>

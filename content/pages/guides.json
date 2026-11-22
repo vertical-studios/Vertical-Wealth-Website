@@ -9,7 +9,7 @@
       "body": "Short, practical guides for the money decisions that matter most to your family. Download them free, with no form to fill out.",
       "buttons": [
         {
-          "label": "Download the guide",
+          "label": "Download the Guide",
           "href": "https://myauus.sharepoint.com/:b:/s/VerticalStudios/EUgP6mZGDLdNtAdT5IyMDdYBR7RN-L6xJ73WrYynRxSn7Q?e=gLpFmi",
           "style": "primary"
         },
@@ -28,7 +28,7 @@
       "body": "Choosing a financial advisor is a big decision, and so is deciding whether to stay with the one you have. This guide gives you 12 questions to ask, so you can look beyond the balance sheet and see whether an advisor is the right fit for your family.\n\nIt's a free PDF. Download it, print it and bring it to your next conversation with any advisor, including us.",
       "buttons": [
         {
-          "label": "Download the free PDF",
+          "label": "Download the Free PDF",
           "href": "https://myauus.sharepoint.com/:b:/s/VerticalStudios/EUgP6mZGDLdNtAdT5IyMDdYBR7RN-L6xJ73WrYynRxSn7Q?e=gLpFmi",
           "style": "primary"
         }
@@ -74,7 +74,7 @@
       "tone": "black",
       "buttons": [
         {
-          "label": "Book a discovery call",
+          "label": "Book a Discovery Call",
           "href": "/book-a-call",
           "style": "primary"
         },

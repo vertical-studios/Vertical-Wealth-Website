@@ -9,7 +9,7 @@
       "body": "Vertical Wealth takes a holistic, values-driven approach to financial planning. Our service is fiduciary and fee-based, customized to your specific needs. It all starts with a free discovery call, where we get to know you and your goals.",
       "buttons": [
         {
-          "label": "Book a discovery call",
+          "label": "Book a Discovery Call",
           "href": "/book-a-call",
           "style": "primary"
         },
@@ -54,7 +54,7 @@
         {
           "title": "Risk management",
           "body": "We assess your exposure to potential loss and pitfalls, then help put the appropriate tools and protection in place.",
-          "linkLabel": "Get life insurance quotes",
+          "linkLabel": "Get Life Insurance Quotes",
           "linkHref": "/life-insurance"
         },
         {
@@ -74,7 +74,7 @@
       "body": "Our service is fiduciary and fee-based. Advisory fees are a percentage of the assets we manage. The full fee schedule is in our Form ADV, available on request.\n\nIn a world of shifting values, we ground our advice in timeless truth. A few core biblical principles shape how we see wealth, purpose and stewardship. [Read about our approach](/our-approach).",
       "buttons": [
         {
-          "label": "See how it works",
+          "label": "See How It Works",
           "href": "/how-it-works",
           "style": "secondary"
         }
@@ -87,7 +87,7 @@
       "body": "Live boldly. Give generously. Leave a legacy. It starts with a 15-minute, no-pressure discovery call with Brian. Bring your questions; there's no need to bring statements.",
       "buttons": [
         {
-          "label": "Book a discovery call",
+          "label": "Book a Discovery Call",
           "href": "/book-a-call",
           "style": "primary"
         },

@@ -11,7 +11,7 @@
       "imageAlt": "Brian Wheeler, founder of Vertical Wealth",
       "buttons": [
         {
-          "label": "Choose a time",
+          "label": "Choose a Time",
           "href": "#calendar",
           "style": "primary"
         }
@@ -38,7 +38,7 @@
       ],
       "buttons": [
         {
-          "label": "See how it works",
+          "label": "See How It Works",
           "href": "/how-it-works",
           "style": "secondary"
         }

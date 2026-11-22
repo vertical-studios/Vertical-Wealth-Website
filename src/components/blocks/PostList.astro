@@ -11,7 +11,7 @@ const posts = (await getPosts()).filter((p) => !category || p.data.category === 
     <div class="wrap">
       <div class="head">
         {heading && <h2 data-tina-field={tf(Astro.props, "heading")}>{heading}</h2>}
-        <a class="btn btn-secondary" href="/blog">All articles</a>
+        <a class="btn btn-secondary" href="/blog">All Articles</a>
       </div>
       <div class="grid">{posts.map((p) => <PostCard post={p} />)}</div>
     </div>
