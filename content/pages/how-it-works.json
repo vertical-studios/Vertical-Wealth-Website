@@ -4,7 +4,7 @@
   "blocks": [
     {
       "_template": "hero",
-      "eyebrow": "How it works",
+      "eyebrow": "How It Works",
       "headline": "Your path to clarity and confidence",
       "body": "Choosing a financial advisor is a big decision. Our process is transparent, educational and relational, designed to build trust every step of the way.",
       "buttons": [
@@ -22,7 +22,7 @@
     },
     {
       "_template": "steps",
-      "heading": "How we work together",
+      "heading": "How We Work Together",
       "tone": "purple",
       "body": "Four steps, from a first conversation to a lifelong partnership.",
       "items": [

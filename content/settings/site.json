@@ -5,33 +5,33 @@
   "ogImage": "https://images.squarespace-cdn.com/content/v1/68995ae8093dec7d1e7e63b0/4fad034d-f48e-4aa3-8944-3b747f15ea32/pexels-alena-evseenko-660538512-34120054.jpg?format=1500w",
   "nav": [
     {
-      "label": "Our approach",
+      "label": "Our Approach",
       "links": [
         {
-          "label": "Our approach",
+          "label": "Our Approach",
           "href": "/our-approach"
         },
         {
-          "label": "How it works",
+          "label": "How It Works",
           "href": "/how-it-works"
         }
       ]
     },
     {
-      "label": "What we do",
+      "label": "What We Do",
       "links": [
         {
           "label": "Services",
           "href": "/services"
         },
         {
-          "label": "Life insurance quotes",
+          "label": "Life Insurance Quotes",
           "href": "/life-insurance"
         }
       ]
     },
     {
-      "label": "Who we serve",
+      "label": "Who We Serve",
       "href": "/who-we-serve"
     },
     {
@@ -42,7 +42,7 @@
           "href": "/weekly-lessons"
         },
         {
-          "label": "Free guides",
+          "label": "Free Guides",
           "href": "/guides"
         },
         {
@@ -80,7 +80,7 @@
     }
   ],
   "navCta": {
-    "label": "Book a call",
+    "label": "Book a Call",
     "short": "Book",
     "href": "/book-a-call"
   },
@@ -95,28 +95,28 @@
   "email": "info@verticalwealth.life",
   "footerLinks": [
     {
-      "section": "What we do",
+      "section": "What We Do",
       "label": "Services",
       "href": "/services"
     },
     {
-      "section": "What we do",
-      "label": "Life insurance quotes",
+      "section": "What We Do",
+      "label": "Life Insurance Quotes",
       "href": "/life-insurance"
     },
     {
-      "section": "What we do",
-      "label": "Who we serve",
+      "section": "What We Do",
+      "label": "Who We Serve",
       "href": "/who-we-serve"
     },
     {
-      "section": "What we do",
-      "label": "How it works",
+      "section": "What We Do",
+      "label": "How It Works",
       "href": "/how-it-works"
     },
     {
       "section": "Learn",
-      "label": "Our approach",
+      "label": "Our Approach",
       "href": "/our-approach"
     },
     {
@@ -126,7 +126,7 @@
     },
     {
       "section": "Learn",
-      "label": "Free guides",
+      "label": "Free Guides",
       "href": "/guides"
     },
     {
@@ -146,7 +146,7 @@
     },
     {
       "section": "About",
-      "label": "Book a call",
+      "label": "Book a Call",
       "href": "/book-a-call"
     }
   ],
@@ -170,11 +170,11 @@
   ],
   "legal": [
     {
-      "label": "Privacy policy",
+      "label": "Privacy Policy",
       "href": "/privacy-policy"
     },
     {
-      "label": "Terms of service",
+      "label": "Terms of Service",
       "href": "/terms-of-service"
     },
     {
@@ -200,7 +200,7 @@
     }
   ],
   "siteName": "Vertical Wealth",
-  "contactHeading": "Talk with us",
+  "contactHeading": "Talk With Us",
   "familyHeading": "Part of Vertical Life",
-  "utilityLabel": "Client login"
+  "utilityLabel": "Client Login"
 }
