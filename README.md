@@ -2,7 +2,7 @@
 
 Astro static site with the TinaCMS editor (click-to-edit), deployed on Vercel. Content lives in `/content` as JSON (pages, settings) and Markdown (Insights posts). Every edit, by a person or by AI, is a Git commit, so anything can be rolled back.
 
-The design and structure follow the Vertical Wealth Site Foundation board, signed off Nov 18, 2026: white ground, black nav and footer, purple (#663399) for accents, yellow for buttons, flat surfaces (no texture, no drop shadows), square corners, black-and-white photos, Bebas Neue Pro (mixed case, -0.02em tracking, compact scale) for headlines up to six words, Roboto body at 18px. Weekly Lessons is the first step for cold visitors; the discovery call is the second.
+The design and structure follow the Vertical Wealth Site Foundation board, signed off Nov 18, 2026: white ground, black nav and footer, purple (#663399) for accents, yellow for buttons, flat surfaces (no texture, no drop shadows), square corners, black-and-white photos, Bebas Neue Pro (mixed case, -0.02em tracking, sizes from the shared Vertical family scale) for headlines up to six words, Roboto body at 18px. Weekly Lessons is the first step for cold visitors; the discovery call is the second.
 
 ## Compliance rules for anyone editing
 

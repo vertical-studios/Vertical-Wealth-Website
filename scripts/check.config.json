@@ -1,0 +1,34 @@
+{
+  "_note": "Site-only banned phrases and known exceptions for scripts/check.mjs. Family-wide rules live in check.mjs.",
+  "banned": [
+    "\\bSPVs?\\b",
+    "private placement",
+    "guarantee",
+    "52 lessons",
+    "full year of",
+    "concierge",
+    "delegate the rest",
+    "\\bsecure your\\b",
+    "beat the market",
+    "risk-free",
+    "acheivement",
+    "\\bour your\\b"
+  ],
+  "allow": [
+    {
+      "page": "privacy-policy.html",
+      "pattern": "guarantee",
+      "why": "Legal pages must say 'not guaranteed'"
+    },
+    {
+      "page": "terms-of-service.html",
+      "pattern": "guarantee",
+      "why": "Legal pages must say 'not guaranteed'"
+    },
+    {
+      "page": "disclosures.html",
+      "pattern": "guarantee",
+      "why": "Legal pages must say 'not guaranteed'"
+    }
+  ]
+}

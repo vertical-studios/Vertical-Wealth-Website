@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "tinacms dev -c \"astro dev\"",
     "build": "node scripts/build.mjs",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "check": "node scripts/check.mjs"
   },
   "keywords": [],
   "author": "",
